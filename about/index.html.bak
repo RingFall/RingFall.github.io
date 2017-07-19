@@ -191,10 +191,10 @@
     </a>
     <div class="info">
       <h3 class="name" style="font-family: calligraffittiregular">
-        铃音纷落
+        RingFall
       </h3>
       <div class="slogan">
-        铃音不才 纷落为歌
+        ring falls, ring sings.
       </div>
     </div>
   </div>
@@ -211,22 +211,16 @@
 
         
           
-            <div class="text">1998-04-13</div>
+            <div class="text">Scut，1991，Spring.</div>
           
-            <div class="text">蠢</div>
+            <div class="text">喜欢设计，擅长编程，喜欢睡懒觉.</div>
           
-            <div class="text">喵</div>
+            <div class="text">前端开发工程师，常用 HTML / CSS / JavaScript.</div>
           
-            <div class="text">腐</div>
-
-            <div class="text">懒</div>
-			
-            <div class="text">瘫</div>
         
-            <div class="text">残</div>
 
       </li>
-    <!--
+    
       <li class="about-item">
         
           <i class="icon icon-github dot dot-1"></i>
@@ -274,7 +268,7 @@
         
 
       </li>
-    -->
+    
       <li class="about-item">
         
           <i class="icon icon-location dot dot-4"></i>
@@ -284,7 +278,7 @@
           <div class="text">
             <span></span>
             
-              <span>CUMT</span>
+              <span>珠海</span>
             
           </div>
         
