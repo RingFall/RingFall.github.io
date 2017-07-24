@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://ringfall.me/2017/07/23/安恒记录/index.html">
 <meta property="og:site_name" content="RingFall">
 <meta property="og:description" content="无修版在这儿 选拔神它喵的题目。。神它喵最高分。。神它喵队长。。附上野鸡题目和窝各种姿势百度的答案 day1法律balabalabala…总而言之就是要有法律意识2333一不小心就进去了 社工论如何通过各种渠道勾搭妹子或者悄咪咪视奸她的各种动态/滑稽 day2 web书精通脚本黑客web深度解剖乌云的漏洞库 8w端口对应表（对每个端口的漏洞进行测试挖掘） 网页流程个人-网络-cdn-对方服务器（安">
-<meta property="og:updated_time" content="2017-07-24T00:45:21.474Z">
+<meta property="og:updated_time" content="2017-07-24T00:50:05.708Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安恒笔记（稍微整理版）">
 <meta name="twitter:description" content="无修版在这儿 选拔神它喵的题目。。神它喵最高分。。神它喵队长。。附上野鸡题目和窝各种姿势百度的答案 day1法律balabalabala…总而言之就是要有法律意识2333一不小心就进去了 社工论如何通过各种渠道勾搭妹子或者悄咪咪视奸她的各种动态/滑稽 day2 web书精通脚本黑客web深度解剖乌云的漏洞库 8w端口对应表（对每个端口的漏洞进行测试挖掘） 网页流程个人-网络-cdn-对方服务器（安">
@@ -255,7 +255,7 @@
 <h4 id="IIS-短标签"><a href="#IIS-短标签" class="headerlink" title="IIS 短标签"></a>IIS 短标签</h4><p>&lt; === . 一个任意字符<br>&lt;&lt; === .* 多个任意字符<br>dchnjrhaufgfipHHAWKRGIORHA.txt === d&lt;&lt;<br>如果首个字母相同，比较第二位的ascii，读取小的，以此类推</p>
 <h4 id="远程文件包含"><a href="#远程文件包含" class="headerlink" title="远程文件包含"></a>远程文件包含</h4><p>allow_url_include=off（http or ftp or https）<br>file=php://input就可</p>
 <h4 id="伪协议"><a href="#伪协议" class="headerlink" title="伪协议"></a>伪协议</h4><p>?file=php://filter/convert.base64-encode/resource=xxx.php</p>
-<h2 id="day3-web"><a href="#day3-web" class="headerlink" title="day3 web"></a>day3 web</h2><h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><p>反射型<br>存储型<br>标签<br><code>&lt;script&gt;alert()&lt;/script&gt;</code><br><code>&lt;body onload=alert()&gt;</code><br><code>&lt;input name=&quot;user&quot; value=&quot;变量&quot;&gt;</code><br>内联<br><code>&lt;input name=&quot;user&quot; value=&quot;1&quot; onmouseover=&quot;alert()&quot;&gt;</code><br>1” onmouseover=”alert()<br>终止<br><code>&lt;input name=&quot;user&quot; value=&quot;1&quot; onmouseover=alert()//&quot;&gt;</code><br>1” onmouseover=alert()//<br>html<br><code>&lt;input name=&quot;user&quot; value=&quot;&quot;&gt;&lt;svg/onload=alert()&gt;&quot;&gt;</code><br>“&gt;<svg onload="alert()"><br/>xss平台 窃取访问插入处页面用户的cookie</svg></p>
+<h2 id="day3-web"><a href="#day3-web" class="headerlink" title="day3 web"></a>day3 web</h2><h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><p>反射型<br>存储型<br>标签<br><code>&lt;script&gt;alert()&lt;/script&gt;</code><br><code>&lt;body onload=alert()&gt;</code><br><code>&lt;input name=&quot;user&quot; value=&quot;变量&quot;&gt;</code><br>内联<br><code>&lt;input name=&quot;user&quot; value=&quot;1&quot; onmouseover=&quot;alert()&quot;&gt;</code><br>1” onmouseover=”alert()<br>终止<br><code>&lt;input name=&quot;user&quot; value=&quot;1&quot; onmouseover=alert()//&quot;&gt;</code><br>1” onmouseover=alert()//<br>html<br><code>&lt;input name=&quot;user&quot; value=&quot;&quot;&gt;&lt;svg/onload=alert()&gt;&quot;&gt;</code><br><code>&quot;&gt;&lt;svg/onload=alert()&gt;</code><br>xss平台 窃取访问插入处页面用户的cookie</p>
 <p><br></p>
 
     
