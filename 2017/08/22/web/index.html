@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://ringfall.me/2017/08/22/web/index.html">
 <meta property="og:site_name" content="RingFall">
 <meta property="og:description" content="笔记整理+个人理解（很可能有不对。。。的意思QAQ） 网页流程（个人）在浏览器里输入网址 -&amp;gt;（网络/cdn）浏览器查找域名的IP地址 -&amp;gt;浏览器给web服务器发送一个HTTP请求 -&amp;gt; (安全狗WAF) -&amp;gt;服务器“处理”请求(web服务器软件接收到HTTP请求，然后确定执行什么请求处理来处理它) -&amp;gt;中间件 -&amp;gt;与数据库连接并执行数据库语句 -&amp;gt;服务器">
-<meta property="og:updated_time" content="2017-08-23T14:55:19.247Z">
+<meta property="og:updated_time" content="2017-08-24T13:56:28.949Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="暑假web整理">
 <meta name="twitter:description" content="笔记整理+个人理解（很可能有不对。。。的意思QAQ） 网页流程（个人）在浏览器里输入网址 -&amp;gt;（网络/cdn）浏览器查找域名的IP地址 -&amp;gt;浏览器给web服务器发送一个HTTP请求 -&amp;gt; (安全狗WAF) -&amp;gt;服务器“处理”请求(web服务器软件接收到HTTP请求，然后确定执行什么请求处理来处理它) -&amp;gt;中间件 -&amp;gt;与数据库连接并执行数据库语句 -&amp;gt;服务器">
@@ -273,14 +273,14 @@
 </li>
 <li>具体方法<ul>
 <li>union查询（把两次或多次查询结果合并起来，列数必须一致）</li>
-<li>偏移注入</li>
-<li>二次注入</li>
-<li>宽字节注入</li>
-<li>伪静态注入</li>
-<li>报错注入</li>
-<li>盲注</li>
-<li>布尔注入</li>
-<li>时间注入</li>
+<li>偏移注入（貌似是access的，<code>select * from admin as a inner join admin as b on a.id=b.id</code>就是说把admin表记为a，同时也记为b，然后查询条件是a表的id列与b表的id列相等，返回所有相等的行，显然，a,b都是同一个表，当然全部返回啦。inner join 等同于Where查询，然后有公式啥的。。暂时还没理解透）</li>
+<li>二次注入（服务端接收到黑客提交的第二个请求信息后，为了处理该请求，服务端会查询数据库中已经存储的数据信息并处理，从而导致黑客在第一次请求中构造的SQL语句或者命令在服务端环境中执行。应该是更复杂的，需要理解源码的一种注入。。大概）</li>
+<li>宽字节注入（MySQL用GBK的编码时，\’被转义成%5c%27，在前面加%df等就会解析成一个中文加单引号）</li>
+<li>伪静态注入（把查询的URL假装是静态页面，然而可以直接注入）</li>
+<li>报错注入（看报错里泄露的信息）</li>
+<li>盲注（瞎注x）</li>
+<li>布尔注入（通过判断语句的返回结果判断正误）</li>
+<li>时间注入（根据时间判断注入是否成功）</li>
 </ul>
 </li>
 <li>工具<ul>
