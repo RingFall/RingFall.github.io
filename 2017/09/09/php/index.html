@@ -15,17 +15,17 @@
     <meta name="keywords" content="搅屎棍之路," />
   
 
-  <meta name="description" content="(int)(&amp;#39;1e-1000&amp;#39;)&amp;gt;0&amp;#39;1e-1000&amp;#39;&amp;lt;=0都是真，强转时e处截断，然后1e-1000==0.0">
+  <meta name="description" content="(int)(&amp;#39;1e-1000&amp;#39;)&amp;gt;0&amp;#39;1e-1000&amp;#39;&amp;lt;=0都是真，强转时e处截断，然后1e-1000==0.0 在 PHP 4.2.0 之前，array_search() 在失败时返回 NULL 而不是 FALSE。">
 <meta name="keywords" content="搅屎棍之路">
 <meta property="og:type" content="article">
 <meta property="og:title" content="世界上最好的语言">
 <meta property="og:url" content="http://ringfall.me/2017/09/09/php/index.html">
 <meta property="og:site_name" content="RingFall">
-<meta property="og:description" content="(int)(&amp;#39;1e-1000&amp;#39;)&amp;gt;0&amp;#39;1e-1000&amp;#39;&amp;lt;=0都是真，强转时e处截断，然后1e-1000==0.0">
-<meta property="og:updated_time" content="2017-09-09T08:02:24.518Z">
+<meta property="og:description" content="(int)(&amp;#39;1e-1000&amp;#39;)&amp;gt;0&amp;#39;1e-1000&amp;#39;&amp;lt;=0都是真，强转时e处截断，然后1e-1000==0.0 在 PHP 4.2.0 之前，array_search() 在失败时返回 NULL 而不是 FALSE。">
+<meta property="og:updated_time" content="2017-10-13T14:24:40.159Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="世界上最好的语言">
-<meta name="twitter:description" content="(int)(&amp;#39;1e-1000&amp;#39;)&amp;gt;0&amp;#39;1e-1000&amp;#39;&amp;lt;=0都是真，强转时e处截断，然后1e-1000==0.0">
+<meta name="twitter:description" content="(int)(&amp;#39;1e-1000&amp;#39;)&amp;gt;0&amp;#39;1e-1000&amp;#39;&amp;lt;=0都是真，强转时e处截断，然后1e-1000==0.0 在 PHP 4.2.0 之前，array_search() 在失败时返回 NULL 而不是 FALSE。">
 
   
 
@@ -221,7 +221,10 @@
 
   <div class="article-content">
     
-      <p><code>(int)(&#39;1e-1000&#39;)&gt;0</code><br><code>&#39;1e-1000&#39;&lt;=0</code><br>都是真，强转时e处截断，然后1e-1000==0.0</p>
+      <ul>
+<li><code>(int)(&#39;1e-1000&#39;)&gt;0</code><br><code>&#39;1e-1000&#39;&lt;=0</code><br>都是真，强转时e处截断，然后1e-1000==0.0<br><br></li>
+<li>在 PHP 4.2.0 之前，array_search() 在失败时返回 NULL 而不是 FALSE。<br><br></li>
+</ul>
 
     
   </div>
