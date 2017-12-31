@@ -1,232 +1,496 @@
 <!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
 
 
-  <html class="light page-post">
 
 
-<head>
-  <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            c艹 | 
+        
+        RingFall
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="null,cpp">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
   
-  <title>c艹 | RingFall</title>
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  a {
+    color: #00838F;
+  }
 
-  
-    <meta name="keywords" content="cpp," />
-  
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
 
-  <meta name="description" content="正如老师嗦的，C艹是一个偏底层的，作为计算机专业必须掌握的语言恩。（那你咋就教些基础的不得了的呐x讲道理觉得周围的同学学完了这门课依旧一脸萌比，而且都是偏理论，完全没有寄几动手的编程能力。（说着说着感觉在嗦自己（扶额毕竟湿乎乎嗦要锻炼编程能力来着总而言之这里是一些刷过哒（最水的）OJ和做过哒算法题大集合~~~（其实只是为了备份一下，，不然寄几电脑上的这些cpp舍不得删2333唔有些在学校电脑上做的">
-<meta name="keywords" content="cpp">
-<meta property="og:type" content="article">
-<meta property="og:title" content="c艹">
-<meta property="og:url" content="http://ringfall.me/2017/07/22/cpp/index.html">
-<meta property="og:site_name" content="RingFall">
-<meta property="og:description" content="正如老师嗦的，C艹是一个偏底层的，作为计算机专业必须掌握的语言恩。（那你咋就教些基础的不得了的呐x讲道理觉得周围的同学学完了这门课依旧一脸萌比，而且都是偏理论，完全没有寄几动手的编程能力。（说着说着感觉在嗦自己（扶额毕竟湿乎乎嗦要锻炼编程能力来着总而言之这里是一些刷过哒（最水的）OJ和做过哒算法题大集合~~~（其实只是为了备份一下，，不然寄几电脑上的这些cpp舍不得删2333唔有些在学校电脑上做的">
-<meta property="og:updated_time" content="2017-10-17T09:47:56.625Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="c艹">
-<meta name="twitter:description" content="正如老师嗦的，C艹是一个偏底层的，作为计算机专业必须掌握的语言恩。（那你咋就教些基础的不得了的呐x讲道理觉得周围的同学学完了这门课依旧一脸萌比，而且都是偏理论，完全没有寄几动手的编程能力。（说着说着感觉在嗦自己（扶额毕竟湿乎乎嗦要锻炼编程能力来着总而言之这里是一些刷过哒（最水的）OJ和做过哒算法题大集合~~~（其实只是为了备份一下，，不然寄几电脑上的这些cpp舍不得删2333唔有些在学校电脑上做的">
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
 
-  
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
 
-  
-    <link rel="icon" href="/favicon.ico">
-  
+  .toTop {
+    background: #757575 !important;
+  }
 
-  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
 
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
 
-  
-    <link rel="stylesheet" href="/css/personal-style.css">
-  
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
 
-  
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
 
-  
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-  
-  <script type="text/javascript">
-	(function(){
-	    var bp = document.createElement('script');
-	    var curProtocol = window.location.protocol.split(':')[0];
-	    if (curProtocol === 'https') {
-	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-	    }
-	    else {
-	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-	    }
-	    var s = document.getElementsByTagName("script")[0];
-	    s.parentNode.insertBefore(bp, s);
-	})();
-  </script>
-
+</style>
 
 
-  
-    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  
+<!-- Theme Background Related-->
 
-  
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="RingFall">
+    <meta name="msapplication-starturl" content="http://ringfall.me/2017/07/22/cpp/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="RingFall">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://ringfall.me/2017/07/22/cpp/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="c艹 | RingFall">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="cpp"> 
+
+    
+        <meta property="article:published_time" content="Sat Jul 22 2017 15:34:47 GMT+0800">
+        <meta property="article:modified_time" content="Tue Oct 17 2017 17:47:56 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://ringfall.me/2017/07/22/cpp/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://ringfall.me/2017/07/22/cpp/index.html",
+    "headline": "c艹",
+    "datePublished": "Sat Jul 22 2017 15:34:47 GMT+0800",
+    "dateModified": "Tue Oct 17 2017 17:47:56 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "luoluo",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "RingFall",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",cppnull",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
 </head>
 
-<body>
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
 
-  
-    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
-  
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
 
-  <div class="post-header CENTER">
-   
-  <div class="toolbox">
-    <a class="toolbox-entry" href="/">
-      <span class="toolbox-entry-text">盒子</span>
-      <i class="icon-angle-down"></i>
-      <i class="icon-home"></i>
-    </a>
-    <ul class="list-toolbox">
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/archives/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            博客
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/category/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            分类
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/tag/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            标签
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/link/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/about/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            关于
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/search/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            搜索
-          </a>
-        </li>
-      
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#HDU-入门最合适哒（三周）"><span class="post-toc-number">1.</span> <span class="post-toc-text">HDU 入门最合适哒（三周）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1062-Text-Reverse"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1062 Text Reverse</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1064-Financial-Management"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">1064 Financial Management</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1170-Balloon-Comes"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">1170 Balloon Comes!</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1197-Specialized-Four-Digit-Numbers"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">1197 Specialized Four-Digit Numbers</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1720-A-B-Coming"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">1720 A+B Coming</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2014-青年歌手大奖赛-评委会打分"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">2014 青年歌手大奖赛_评委会打分</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2629-Identity-Card"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">2629 Identity Card</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2734-Quicksum"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">2734 Quicksum</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2012-素数判定"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">2012 素数判定</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2013"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">2013</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2014"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">2014</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2015"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">2015</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2016"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">2016</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2017"><span class="post-toc-number">1.14.</span> <span class="post-toc-text">2017</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2018"><span class="post-toc-number">1.15.</span> <span class="post-toc-text">2018</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2019"><span class="post-toc-number">1.16.</span> <span class="post-toc-text">2019</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2020"><span class="post-toc-number">1.17.</span> <span class="post-toc-text">2020</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1004"><span class="post-toc-number">1.18.</span> <span class="post-toc-text">1004</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2031"><span class="post-toc-number">1.19.</span> <span class="post-toc-text">2031</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2033"><span class="post-toc-number">1.20.</span> <span class="post-toc-text">2033</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2072"><span class="post-toc-number">1.21.</span> <span class="post-toc-text">2072</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2016-12-09-安安的破壳日礼物-好羞耻好中二（感觉写的完全没有技术含量x"><span class="post-toc-number">2.</span> <span class="post-toc-text">2016-12-09 安安的破壳日礼物 好羞耻好中二（感觉写的完全没有技术含量x</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#C-作业题-大一上"><span class="post-toc-number">3.</span> <span class="post-toc-text">C++作业题 大一上</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-29-82-2"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">10.29 82-2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#82-3"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">82-3</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#82-6"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">82-6</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#83-11"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">83-11</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11-7-106-1"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">11.7 106-1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#106-6"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">106-6</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#106-9"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">106-9</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#106-11"><span class="post-toc-number">3.8.</span> <span class="post-toc-text">106-11</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11-27-134-1"><span class="post-toc-number">3.9.</span> <span class="post-toc-text">11.27 134-1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#134-2"><span class="post-toc-number">3.10.</span> <span class="post-toc-text">134-2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#134-5"><span class="post-toc-number">3.11.</span> <span class="post-toc-text">134-5</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#12-7-185-2"><span class="post-toc-number">3.12.</span> <span class="post-toc-text">12.7 185-2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#186-5"><span class="post-toc-number">3.13.</span> <span class="post-toc-text">186-5</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#186-7"><span class="post-toc-number">3.14.</span> <span class="post-toc-text">186-7</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#186-9"><span class="post-toc-number">3.15.</span> <span class="post-toc-text">186-9</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#211-1"><span class="post-toc-number">3.16.</span> <span class="post-toc-text">211-1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#211-5"><span class="post-toc-number">3.17.</span> <span class="post-toc-text">211-5</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#12-22-258-1"><span class="post-toc-number">3.18.</span> <span class="post-toc-text">12.22 258-1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#259-3"><span class="post-toc-number">3.19.</span> <span class="post-toc-text">259-3</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PAT-也是比较入门的模拟啊之类的（保持手感必备2333"><span class="post-toc-number">4.</span> <span class="post-toc-text">PAT 也是比较入门的模拟啊之类的（保持手感必备2333</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#13"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">13</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#17"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">17</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1001"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">1001</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1002"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">1002</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1003"><span class="post-toc-number">4.6.</span> <span class="post-toc-text">1003</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1004-1"><span class="post-toc-number">4.7.</span> <span class="post-toc-text">1004</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1005"><span class="post-toc-number">4.8.</span> <span class="post-toc-text">1005</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1006"><span class="post-toc-number">4.9.</span> <span class="post-toc-text">1006</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1007"><span class="post-toc-number">4.10.</span> <span class="post-toc-text">1007</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1008"><span class="post-toc-number">4.11.</span> <span class="post-toc-text">1008</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1010"><span class="post-toc-number">4.12.</span> <span class="post-toc-text">1010</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2010"><span class="post-toc-number">4.13.</span> <span class="post-toc-text">2010</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#寒假看着白书的VOJ划水之路（大概算是acm入门必经之路？反正窝就围观围观"><span class="post-toc-number">5.</span> <span class="post-toc-text">寒假看着白书的VOJ划水之路（大概算是acm入门必经之路？反正窝就围观围观</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据结构-1"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">数据结构 1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#搜索-1-lake-couting"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">搜索 1-lake couting</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-red-and-black"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">2-red and black</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-curling"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">3-curling</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-meteor-shower"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">4-meteor shower</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#贪心-1-优先队列"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">贪心 1-优先队列</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1"><span class="post-toc-number">5.7.</span> <span class="post-toc-text">2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3"><span class="post-toc-number">5.8.</span> <span class="post-toc-text">3</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4"><span class="post-toc-number">5.9.</span> <span class="post-toc-text">4</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据结构-煤大OJ-大一下"><span class="post-toc-number">6.</span> <span class="post-toc-text">数据结构 煤大OJ 大一下</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1A"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">1A</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1B"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">1B</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1C"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">1C</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1D"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">1D</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1E"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">1E</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1F"><span class="post-toc-number">6.6.</span> <span class="post-toc-text">1F</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1G"><span class="post-toc-number">6.7.</span> <span class="post-toc-text">1G</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1H"><span class="post-toc-number">6.8.</span> <span class="post-toc-text">1H</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1J"><span class="post-toc-number">6.9.</span> <span class="post-toc-text">1J</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1K"><span class="post-toc-number">6.10.</span> <span class="post-toc-text">1K</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1L"><span class="post-toc-number">6.11.</span> <span class="post-toc-text">1L</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1M"><span class="post-toc-number">6.12.</span> <span class="post-toc-text">1M</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1N"><span class="post-toc-number">6.13.</span> <span class="post-toc-text">1N</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2A"><span class="post-toc-number">6.14.</span> <span class="post-toc-text">2A</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2B"><span class="post-toc-number">6.15.</span> <span class="post-toc-text">2B</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2C"><span class="post-toc-number">6.16.</span> <span class="post-toc-text">2C</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2D"><span class="post-toc-number">6.17.</span> <span class="post-toc-text">2D</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2E"><span class="post-toc-number">6.18.</span> <span class="post-toc-text">2E</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2F"><span class="post-toc-number">6.19.</span> <span class="post-toc-text">2F</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2G"><span class="post-toc-number">6.20.</span> <span class="post-toc-text">2G</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2H"><span class="post-toc-number">6.21.</span> <span class="post-toc-text">2H</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2I"><span class="post-toc-number">6.22.</span> <span class="post-toc-text">2I</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2J"><span class="post-toc-number">6.23.</span> <span class="post-toc-text">2J</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2K"><span class="post-toc-number">6.24.</span> <span class="post-toc-text">2K</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2L"><span class="post-toc-number">6.25.</span> <span class="post-toc-text">2L</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2M"><span class="post-toc-number">6.26.</span> <span class="post-toc-text">2M</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2O"><span class="post-toc-number">6.27.</span> <span class="post-toc-text">2O</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3F"><span class="post-toc-number">6.28.</span> <span class="post-toc-text">3F</span></a></li></ol></li></ol>
     </ul>
-  </div>
+    
 
 
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                c艹
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>luoluo</strong>
+        <span>7月 22, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/cpp/">cpp</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=c艹&url=http://ringfall.me/2017/07/22/cpp/index.html&pic=http://ringfall.me/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=c艹&url=http://ringfall.me/2017/07/22/cpp/index.html&via=luoluo" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ringfall.me/2017/07/22/cpp/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ringfall.me/2017/07/22/cpp/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
 </div>
 
+                
 
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HDU-入门最合适哒（三周）"><span class="toc-text">HDU 入门最合适哒（三周）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1062-Text-Reverse"><span class="toc-text">1062 Text Reverse</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1064-Financial-Management"><span class="toc-text">1064 Financial Management</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1170-Balloon-Comes"><span class="toc-text">1170 Balloon Comes!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1197-Specialized-Four-Digit-Numbers"><span class="toc-text">1197 Specialized Four-Digit Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1720-A-B-Coming"><span class="toc-text">1720 A+B Coming</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2014-青年歌手大奖赛-评委会打分"><span class="toc-text">2014 青年歌手大奖赛_评委会打分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2629-Identity-Card"><span class="toc-text">2629 Identity Card</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2734-Quicksum"><span class="toc-text">2734 Quicksum</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2012-素数判定"><span class="toc-text">2012 素数判定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2013"><span class="toc-text">2013</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2014"><span class="toc-text">2014</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2015"><span class="toc-text">2015</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2016"><span class="toc-text">2016</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2017"><span class="toc-text">2017</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2018"><span class="toc-text">2018</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2019"><span class="toc-text">2019</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2020"><span class="toc-text">2020</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1004"><span class="toc-text">1004</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2031"><span class="toc-text">2031</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2033"><span class="toc-text">2033</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2072"><span class="toc-text">2072</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2016-12-09-安安的破壳日礼物-好羞耻好中二（感觉写的完全没有技术含量x"><span class="toc-text">2016-12-09 安安的破壳日礼物 好羞耻好中二（感觉写的完全没有技术含量x</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-作业题-大一上"><span class="toc-text">C++作业题 大一上</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-29-82-2"><span class="toc-text">10.29 82-2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#82-3"><span class="toc-text">82-3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#82-6"><span class="toc-text">82-6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#83-11"><span class="toc-text">83-11</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-7-106-1"><span class="toc-text">11.7 106-1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#106-6"><span class="toc-text">106-6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#106-9"><span class="toc-text">106-9</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#106-11"><span class="toc-text">106-11</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-27-134-1"><span class="toc-text">11.27 134-1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#134-2"><span class="toc-text">134-2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#134-5"><span class="toc-text">134-5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-7-185-2"><span class="toc-text">12.7 185-2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#186-5"><span class="toc-text">186-5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#186-7"><span class="toc-text">186-7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#186-9"><span class="toc-text">186-9</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#211-1"><span class="toc-text">211-1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#211-5"><span class="toc-text">211-5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-22-258-1"><span class="toc-text">12.22 258-1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#259-3"><span class="toc-text">259-3</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PAT-也是比较入门的模拟啊之类的（保持手感必备2333"><span class="toc-text">PAT 也是比较入门的模拟啊之类的（保持手感必备2333</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2"><span class="toc-text">2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13"><span class="toc-text">13</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17"><span class="toc-text">17</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1001"><span class="toc-text">1001</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1002"><span class="toc-text">1002</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1003"><span class="toc-text">1003</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1004-1"><span class="toc-text">1004</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1005"><span class="toc-text">1005</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1006"><span class="toc-text">1006</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1007"><span class="toc-text">1007</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1008"><span class="toc-text">1008</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1010"><span class="toc-text">1010</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2010"><span class="toc-text">2010</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#寒假看着白书的VOJ划水之路（大概算是acm入门必经之路？反正窝就围观围观"><span class="toc-text">寒假看着白书的VOJ划水之路（大概算是acm入门必经之路？反正窝就围观围观</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据结构-1"><span class="toc-text">数据结构 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#搜索-1-lake-couting"><span class="toc-text">搜索 1-lake couting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-red-and-black"><span class="toc-text">2-red and black</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-curling"><span class="toc-text">3-curling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-meteor-shower"><span class="toc-text">4-meteor shower</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#贪心-1-优先队列"><span class="toc-text">贪心 1-优先队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1"><span class="toc-text">2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3"><span class="toc-text">3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4"><span class="toc-text">4</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据结构-煤大OJ-大一下"><span class="toc-text">数据结构 煤大OJ 大一下</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1A"><span class="toc-text">1A</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1B"><span class="toc-text">1B</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1C"><span class="toc-text">1C</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1D"><span class="toc-text">1D</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1E"><span class="toc-text">1E</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1F"><span class="toc-text">1F</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1G"><span class="toc-text">1G</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1H"><span class="toc-text">1H</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1J"><span class="toc-text">1J</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1K"><span class="toc-text">1K</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1L"><span class="toc-text">1L</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1M"><span class="toc-text">1M</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1N"><span class="toc-text">1N</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2A"><span class="toc-text">2A</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2B"><span class="toc-text">2B</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2C"><span class="toc-text">2C</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2D"><span class="toc-text">2D</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2E"><span class="toc-text">2E</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2F"><span class="toc-text">2F</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2G"><span class="toc-text">2G</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2H"><span class="toc-text">2H</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2I"><span class="toc-text">2I</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2J"><span class="toc-text">2J</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2K"><span class="toc-text">2K</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2L"><span class="toc-text">2L</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2M"><span class="toc-text">2M</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2O"><span class="toc-text">2O</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3F"><span class="toc-text">3F</span></a></li></ol></li></ol>
-  </div>
-
-
-
-<div class="content content-post CENTER">
-   <article id="post-cpp" class="article article-type-post" itemprop="blogPost">
-  <header class="article-header">
-    <h1 class="post-title">c艹</h1>
-
-    <div class="article-meta">
-      <span>
-        <i class="icon-calendar"></i>
-        <span>2017.07.22</span>
-      </span>
-
-      
-        <span class="article-author">
-          <i class="icon-user"></i>
-          <span>luoluo</span>
-        </span>
-      
-
-      
-  <span class="article-category">
-    <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/Blog/">Blog</a>
-  </span>
-
-
-
-      
-        <span>
-          <i class="icon-comment"></i>
-          <a href="http://ringfall.me/2017/07/22/cpp/#disqus_thread"></a>
-        </span>
-      
-
-      
-      <i class="fa fa-eye"></i> 
-        <span id="busuanzi_container_page_pv">
-           &nbsp热度 <span id="busuanzi_value_page_pv">
-           <i class="fa fa-spinner fa-spin"></i></span>℃
-        </span>
-      
-
-      
-      
-    </div>
-  </header>
-
-  <div class="article-content">
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-      <p>正如老师嗦的，C艹是一个偏底层的，作为计算机专业必须掌握的语言恩。（那你咋就教些基础的不得了的呐x<br>讲道理觉得周围的同学学完了这门课依旧一脸萌比，而且都是偏理论，完全没有寄几动手的编程能力。（说着说着感觉在嗦自己（扶额<br>毕竟湿乎乎嗦要锻炼编程能力来着<br>总而言之这里是一些刷过哒（最水的）OJ和做过哒算法题大集合~~~（其实只是为了备份一下，，不然寄几电脑上的这些cpp舍不得删2333<br>唔有些在学校电脑上做的就没存啦，莫名感觉质量高的都是在各种比赛的时候做的（误</p>
+        <p>正如老师嗦的，C艹是一个偏底层的，作为计算机专业必须掌握的语言恩。（那你咋就教些基础的不得了的呐x<br>讲道理觉得周围的同学学完了这门课依旧一脸萌比，而且都是偏理论，完全没有寄几动手的编程能力。（说着说着感觉在嗦自己（扶额<br>毕竟湿乎乎嗦要锻炼编程能力来着<br>总而言之这里是一些刷过哒（最水的）OJ和做过哒算法题大集合~~~（其实只是为了备份一下，，不然寄几电脑上的这些cpp舍不得删2333<br>唔有些在学校电脑上做的就没存啦，莫名感觉质量高的都是在各种比赛的时候做的（误</p>
 <h2 id="HDU-入门最合适哒（三周）"><a href="#HDU-入门最合适哒（三周）" class="headerlink" title="HDU 入门最合适哒（三周）"></a>HDU 入门最合适哒（三周）</h2><h3 id="1062-Text-Reverse"><a href="#1062-Text-Reverse" class="headerlink" title="1062 Text Reverse"></a>1062 Text Reverse</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">using namespace std;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">	int i;</div><div class="line">	while(cin&gt;&gt;i)</div><div class="line">	&#123;</div><div class="line">		getchar();</div><div class="line">		while(i--)</div><div class="line">		&#123;</div><div class="line">			int b;</div><div class="line">			char s[1000];</div><div class="line">			gets(s);</div><div class="line">			int a=0;</div><div class="line">			for(;s[a]!=&apos;\0&apos;;a++)</div><div class="line">			&#123;</div><div class="line">				if(s[a]==&apos; &apos;)</div><div class="line">				&#123;</div><div class="line">					b=a-1;</div><div class="line">					for(;s[b]!=&apos; &apos;&amp;&amp;b&gt;=0;b--)</div><div class="line">					&#123;</div><div class="line">						cout&lt;&lt;s[b];</div><div class="line">						if(b==0)</div><div class="line">							break;</div><div class="line">					&#125;</div><div class="line">					cout&lt;&lt;&apos; &apos;;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			if(s[a]==&apos;\0&apos;)</div><div class="line">				&#123;</div><div class="line">					b=a-1;</div><div class="line">					for(;s[b]!=&apos; &apos;&amp;&amp;b&gt;=0;b--)</div><div class="line">					&#123;</div><div class="line">						cout&lt;&lt;s[b];</div><div class="line">						if(b==0)</div><div class="line">							break;</div><div class="line">		&#125;</div><div class="line">			&#125;</div><div class="line">			cout&lt;&lt;endl;</div><div class="line">	&#125;</div><div class="line">	&#125;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="1064-Financial-Management"><a href="#1064-Financial-Management" class="headerlink" title="1064 Financial Management"></a>1064 Financial Management</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">include&lt;iostream&gt;</div><div class="line">using namespace std;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">	float a,sum,b;</div><div class="line">	sum=0;</div><div class="line">	for(int i=0;i&lt;12;i++)</div><div class="line">	&#123;</div><div class="line">		cin&gt;&gt;a;</div><div class="line">		sum+=a;</div><div class="line">	&#125;</div><div class="line">	b=sum/12.0;</div><div class="line">	printf(&quot;$%.2f\n&quot;,b);</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="1170-Balloon-Comes"><a href="#1170-Balloon-Comes" class="headerlink" title="1170 Balloon Comes!"></a>1170 Balloon Comes!</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">using namespace std;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">	int i;</div><div class="line">	cin&gt;&gt;i;</div><div class="line">	while(i--)</div><div class="line">	&#123;</div><div class="line">		char c;</div><div class="line">		int a,b;</div><div class="line">		cin&gt;&gt;c&gt;&gt;a&gt;&gt;b;</div><div class="line">		if(c==&apos;+&apos;)</div><div class="line">			cout&lt;&lt;a+b&lt;&lt;endl;</div><div class="line">		else if(c==&apos;-&apos;)</div><div class="line">			cout&lt;&lt;a-b&lt;&lt;endl;</div><div class="line">		else if(c==&apos;*&apos;)</div><div class="line">			cout&lt;&lt;a*b&lt;&lt;endl;</div><div class="line">		else</div><div class="line">		&#123;</div><div class="line">			if(a%b==0)</div><div class="line">				cout&lt;&lt;a/b&lt;&lt;endl;</div><div class="line">			else</div><div class="line">			&#123;</div><div class="line">			double n;</div><div class="line">		    n=a/(b*1.0);</div><div class="line">		    printf(&quot;%.2f&quot;,n);</div><div class="line">			cout&lt;&lt;endl;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">     &#125;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -320,189 +584,406 @@
 <h3 id="3F"><a href="#3F" class="headerlink" title="3F"></a>3F</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;stdio.h&gt;</div><div class="line">using namespace std;</div><div class="line">struct node&#123;</div><div class="line">	node *le;</div><div class="line">	node *ri;</div><div class="line">	char i;</div><div class="line">&#125;;</div><div class="line">void qian(node *a)</div><div class="line">&#123;</div><div class="line">	if(a!=NULL)</div><div class="line">	&#123;</div><div class="line">	  cout&lt;&lt;(*a).i&lt;&lt;&apos; &apos;;</div><div class="line">	  if((*a).le!=NULL)</div><div class="line">	       qian((*a).le);</div><div class="line">	  if((*a).ri!=NULL)</div><div class="line">	      qian((*a).ri);</div><div class="line">	&#125;</div><div class="line">	return;</div><div class="line">&#125;</div><div class="line">void zhong(node *a)</div><div class="line">&#123;</div><div class="line">	if(a!=NULL)</div><div class="line">	&#123;</div><div class="line">	  if((*a).le!=NULL)</div><div class="line">	       zhong((*a).le);</div><div class="line">	  cout&lt;&lt;(*a).i&lt;&lt;&apos; &apos;;</div><div class="line">	  if((*a).ri!=NULL)</div><div class="line">	      zhong((*a).ri);</div><div class="line">	&#125;</div><div class="line">	return;</div><div class="line">&#125;</div><div class="line">void hou(node *a)</div><div class="line">&#123;</div><div class="line">	if(a!=NULL)</div><div class="line">	&#123;</div><div class="line">	  if((*a).le!=NULL)</div><div class="line">	       hou((*a).le);</div><div class="line">	  if((*a).ri!=NULL)</div><div class="line">	      hou((*a).ri);</div><div class="line">	  cout&lt;&lt;(*a).i&lt;&lt;&apos; &apos;;</div><div class="line">	&#125;</div><div class="line">	return;</div><div class="line">&#125;</div><div class="line">node *t=new node;</div><div class="line">void zao(node *tt,char q)</div><div class="line">&#123;</div><div class="line">	 (*tt).i=q;</div><div class="line">	 char a,b;</div><div class="line">	 scanf(&quot;%c&quot;,&amp;a);</div><div class="line">	 if(a==&apos; &apos;)</div><div class="line">		 (*tt).le=NULL;</div><div class="line">	 else</div><div class="line">	 &#123;</div><div class="line">	     (*tt).le=new node;</div><div class="line">          zao((*tt).le,a);</div><div class="line">	 &#125;</div><div class="line">	 scanf(&quot;%c&quot;,&amp;b);</div><div class="line">	 if(b==&apos; &apos;)</div><div class="line">		 (*tt).ri=NULL;</div><div class="line">	 else</div><div class="line">	 &#123;</div><div class="line">	     (*tt).ri=new node;</div><div class="line">          zao((*tt).ri,b);</div><div class="line">	 &#125;</div><div class="line">	 return;</div><div class="line">&#125;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">	char a;</div><div class="line">	scanf(&quot;%c&quot;,&amp;a);</div><div class="line">	zao(t,a);</div><div class="line">	qian(t);</div><div class="line">	cout&lt;&lt;endl;</div><div class="line">	zhong(t);</div><div class="line">	cout&lt;&lt;endl;</div><div class="line">	zhong(t);</div><div class="line">	cout&lt;&lt;endl;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>作为一只程序猿，想必还是要和西加加打交道哒啦~待续吧<br><br></p>
 
+        
     
-  </div>
-</article>
 
-
-   
-
-   
-  <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2017/07/18/hello-ringfall/">
-        <i class="icon icon-angle-left"></i>
-    </a>
-    <a class="show pull-right" href="/2017/07/22/dy/">
-        <i class="icon icon-angle-right"></i>
-    </a>
-  </div>
-
-
-
-
+    
 </div>
 
 
-  <a id="backTop" class="back-top">
-    <i class="icon-angle-up"></i>
-  </a>
+                
 
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
 
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/07/22/dy/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
 
-  <div class="modal" id="modal">
-  <span id="cover" class="cover hide"></span>
-  <div id="modal-dialog" class="modal-dialog hide-dialog">
-    <div class="modal-header">
-      <span id="close" class="btn-close">关闭</span>
+    <!-- Next Nav -->
+    
+        <a href="/2017/07/18/hello-ringfall/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
     </div>
-    <hr>
-    <div class="modal-body">
-      <ul class="list-toolbox">
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/archives/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              博客
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/category/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              分类
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/tag/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              标签
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/link/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/about/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              关于
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/search/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              搜索
-            </a>
-          </li>
-        
-      </ul>
 
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="luoluo's avatar">
     </div>
-  </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
 </div>
 
 
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
 
-  
-      <div class="fexo-comments comments-post">
+    <!-- Homepage -->
     
-  <section class="disqus-comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">5</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
     </div>
-  </section>
 
-  <script>
-    var disqus_shortname = 'forsigner';
-    
-    var disqus_url = 'http://ringfall.me/2017/07/22/cpp/';
-    
-    (function(){
-      var dsq = document.createElement('script');
-      dsq.type = 'text/javascript';
-      dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-
-  <script id="dsq-count-scr" src="//forsigner.disqus.com/count.js" async></script>
-
-
-
+    <!-- Sidebar Image -->
     
 
+</aside>
 
+                    
 
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
     
 
+    <!-- Facebook -->
     
-	
-  </div>
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
 
-  
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
 
-  <script type="text/javascript">
-  function loadScript(url, callback) {
-    var script = document.createElement('script')
-    script.type = 'text/javascript';
+    <!-- Weibo -->
+    
 
-    if (script.readyState) { //IE
-      script.onreadystatechange = function() {
-        if (script.readyState == 'loaded' ||
-          script.readyState == 'complete') {
-          script.onreadystatechange = null;
-          callback();
-        }
-      };
-    } else { //Others
-      script.onload = function() {
-        callback();
-      };
-    }
+    <!-- Instagram -->
+    
 
-    script.src = url;
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
+    <!-- Tumblr -->
+    
 
-  window.onload = function() {
-    loadScript('/js/bundle.js?235683', function() {
-      // load success
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>RingFall
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
     });
-  }
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
 </script>
 
-</body>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
 </html>
