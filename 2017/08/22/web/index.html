@@ -365,17 +365,8 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://s1.ax1x.com/2018/01/01/pSobiq.jpg)">
     
             <p class="article-headline-p">
                 暑假web整理
@@ -643,11 +634,11 @@
 </li>
 </ul>
 </li>
-<li><p>目录验证<br>   在A/b/c/是上传保存文件目录，存在一个脚本，判断c目录下是否存在php后缀的文件，如果存在，则删除。存在一个定义路径的变量和上传文件的变量</p>
-   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Content-Disposition: form-data; name=&quot;path&quot;</div><div class="line"></div><div class="line">../images</div><div class="line">-----------------------------190023260920007</div><div class="line">Content-Disposition: form-data; name=&quot;upfile&quot;; filename=&quot;1.php&quot;</div><div class="line">Content-Type: application/octet-stream</div><div class="line"></div><div class="line">&lt;?php</div><div class="line">phpinfo();</div></pre></td></tr></table></figure>
-<p>   修改path，导致上传路径变到b目录下，不存在检测，则绕过验证</p>
+<li><p>目录验证<br>  在A/b/c/是上传保存文件目录，存在一个脚本，判断c目录下是否存在php后缀的文件，如果存在，则删除。存在一个定义路径的变量和上传文件的变量</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Content-Disposition: form-data; name=&quot;path&quot;</div><div class="line"></div><div class="line">../images</div><div class="line">-----------------------------190023260920007</div><div class="line">Content-Disposition: form-data; name=&quot;upfile&quot;; filename=&quot;1.php&quot;</div><div class="line">Content-Type: application/octet-stream</div><div class="line"></div><div class="line">&lt;?php</div><div class="line">phpinfo();</div></pre></td></tr></table></figure>
+<p>  修改path，导致上传路径变到b目录下，不存在检测，则绕过验证</p>
 </li>
-<li>二次上传/双文件上传<br>在c是上传保存文件目录，代码存在bug，可以一次上传多个文件，但是检测的时候只检测第一个上传的文件，导致了使用双文件上传直接突破</li>
+<li>二次上传/双文件上传<br> 在c是上传保存文件目录，代码存在bug，可以一次上传多个文件，但是检测的时候只检测第一个上传的文件，导致了使用双文件上传直接突破</li>
 <li>安全防护<ul>
 <li>代码层，使用白名单，上传类型限制</li>
 <li>将上传目录设置为无执行权限</li>
@@ -916,7 +907,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Dairy/">Dairy<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Diary/">Diary<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Dairy/">Dairy<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Diary/">Diary<span class="sidebar_archives-count">4</span></a>
             </ul>
         </li>
         

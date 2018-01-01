@@ -365,17 +365,8 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://s1.ax1x.com/2018/01/01/pSoxL4.jpg)">
     
             <p class="article-headline-p">
                 xman笔记
@@ -545,7 +536,7 @@
 <li>（反）序列化</li>
 <li>XSS+CSRF+SSRF+CRLF</li>
 <li>SQLi+RCE+upload</li>
-<li>源码审计<br>-其他</li>
+<li>源码审计<br> -其他</li>
 </ul>
 </li>
 </ul>
@@ -567,9 +558,9 @@
 <h2 id="0x06-XSS"><a href="#0x06-XSS" class="headerlink" title="0x06 XSS"></a>0x06 XSS</h2><p>打cookie<br>盲打后台（看referer）（打出dom…）<br>窃取用户信息<br>XSS Worm<br>XSS 后门<br>第一步：弹框<br>获取cookie：document.cookie(键值对)<br>cookie选项：</p>
 <ul>
 <li>expires失效日期默认session（1.1后max-age） </li>
-<li>domain域名 path路径 默认当前的 重要<br>（跨域xhr请求时(AJAX请求时间之类的)默认不加cookie）<br>（domain可以是父域，但不能是.com）</li>
+<li>domain域名 path路径 默认当前的 重要<br> （跨域xhr请求时(AJAX请求时间之类的)默认不加cookie）<br>  （domain可以是父域，但不能是.com）</li>
 <li>secure安全情况下传输（只看协议，可用HTTPS的XSS平台） </li>
-<li>HttpOnly 默认不带 带的话没法用js查看或修改<br>（phpinfo页面可获取cookie）</li>
+<li>HttpOnly 默认不带 带的话没法用js查看或修改<br> （phpinfo页面可获取cookie）</li>
 </ul>
 <p>每设一条cookie就要set-cookie一次<br>可用document.cookie=。。。在前端console直接设置<br>修改：path/domain要和原来一样<br>删除：把expires设成过去的（path/domain要和原来一样）<br>编码：escape<br>浏览器解析方式<br>token 分出来的词/标签的部分 有限状态机<br>html五种元素 空元素<code>&lt;br&gt;</code> 原始文本元素<code>&lt;sript&gt;&lt;style&gt;</code> RCDATA元素<code>&lt;title&gt;&lt;textarea&gt;</code> 外部元素（MathML或SVG命名空间元素） 基本元素<br>RCDATA:在里面无论写啥都不会被解析，要先闭合标签<br>反射型 URL中 需要用户点链接 浏览器XSS Filter（chrome比较强） 输入-输出<br>存储型 数据库里 用户打开网页就可以 输入-进入数据库-取出数据库-输出<br>步骤：</p>
 <ul>
@@ -741,7 +732,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Dairy/">Dairy<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Diary/">Diary<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Dairy/">Dairy<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Diary/">Diary<span class="sidebar_archives-count">4</span></a>
             </ul>
         </li>
         
