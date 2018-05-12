@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Sat Apr 07 2018 23:09:36 GMT+0800">
-        <meta property="article:modified_time" content="Sun Apr 22 2018 22:38:11 GMT+0800">
+        <meta property="article:modified_time" content="Mon Apr 23 2018 22:43:14 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://ringfall.me/2018/04/07/fuxian/index.html",
     "headline": "复现ING~",
     "datePublished": "Sat Apr 07 2018 23:09:36 GMT+0800",
-    "dateModified": "Sun Apr 22 2018 22:38:11 GMT+0800",
+    "dateModified": "Mon Apr 23 2018 22:43:14 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "铃落",
@@ -496,9 +496,20 @@
 <h3 id="pwnhub-sql"><a href="#pwnhub-sql" class="headerlink" title="pwnhub_sql"></a>pwnhub_sql</h3><p>原题pwnhub的目瞪狗呆</p>
 <p><a href="https://www.anquanke.com/post/id/104319" target="_blank" rel="external">方方土超详细的wp</a></p>
 <ul>
-<li>笛卡尔积 heavyquery</li>
-<li>出题思路 get_lock()</li>
+<li><p>笛卡尔积 heavyquery 来延时</p>
+<p> <code>select count(*) from information_schema.columns, information_schema.columns T1, information_schema.columns T2, information_schema.columns T3</code></p>
+</li>
+<li><p>出题思路 get_lock(‘key’,time)</p>
+<blockquote>
+<p>get_lock()是Mysql的锁机制<br>(1)get_lock会按照key来加锁，别的客户端再以同样的key加锁时就加不了了，处于等待状态。<br>(2)当调用release_lock来释放上面加的锁或客户端断线了，上面的锁才会释放，其它的客户端才能进来。</p>
+</blockquote>
+</li>
 </ul>
+<blockquote>
+<p>mysql_connect() 脚本一结束，到服务器的连接就被关闭<br>mysql_pconnect() 打开一个到 MySQL 服务器的持久连接</p>
+<p>第一次加锁后，需要等待1~2分钟，让服务器将我们下一次的查询当做客户B</p>
+</blockquote>
+<p>时间盲注总结：sleep()|benchmark()|heavy query|get_lock()|rlike</p>
 
         
     
@@ -625,7 +636,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">4</span></a>
             </ul>
         </li>
         
