@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Sat Jul 22 2017 15:34:47 GMT+0800">
-        <meta property="article:modified_time" content="Mon Sep 17 2018 18:54:00 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 10 2018 18:17:41 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://ringfall.me/2017/07/22/cpp/index.html",
     "headline": "c艹",
     "datePublished": "Sat Jul 22 2017 15:34:47 GMT+0800",
-    "dateModified": "Mon Sep 17 2018 18:54:00 GMT+0800",
+    "dateModified": "Wed Oct 10 2018 18:17:41 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "铃落",
@@ -499,6 +499,19 @@
 <li>dp公式好难推啊哭</li>
 </ul>
 <p>第二次作业summary：算法算法算法</p>
+<p>第一次实验课：</p>
+<ul>
+<li>学习到了一个神奇的方法三分，就是在类似二次函数那样有顶点的时候通过三个点依靠单调性判断顶点所在位置</li>
+<li>嗯？之前遇到的溢出居然没在这记录过？又得重新查。。。用malloc动态建立，记得释放</li>
+</ul>
+<p>第三次作业QAQ</p>
+<ul>
+<li>结构体和类使用sort函数时重写cmp函数就好，也可重载符号什么的，sort时记得end是数组个数乘struct里的参数数目</li>
+<li>一眼看去觉得搜索会超时就往dp想x</li>
+<li>strcmp和strcpy挺好用的</li>
+<li>发现一个新函数：lower_bound( begin,end,num)：从数组的begin位置到end-1位置二分查找第一个大于或等于num的数字，找到返回该数字的地址，不存在则返回end。通过返回的地址减去起始地址begin,得到找到数字在数组中的下标</li>
+</ul>
+<p>summary：越来越难惹嘤嘤嘤，已经到了百度之后都看不懂的程度了吗QVQ</p>
 <hr>
 <p>正如老师嗦的，C艹是一个偏底层的，作为计算机专业必须掌握的语言恩。（那你咋就教些基础的不得了的呐x<br>讲道理觉得周围的同学学完了这门课依旧一脸萌比，而且都是偏理论，完全没有寄几动手的编程能力。（说着说着感觉在嗦自己（扶额<br>毕竟湿乎乎嗦要锻炼编程能力来着<br>总而言之这里是一些刷过哒（最水的）OJ和做过哒算法题大集合~~~（其实只是为了备份一下，，不然寄几电脑上的这些cpp舍不得删2333<br>唔有些在学校电脑上做的就没存啦，莫名感觉质量高的都是在各种比赛的时候做的（误</p>
 <h2 id="HDU-入门最合适哒（三周）"><a href="#HDU-入门最合适哒（三周）" class="headerlink" title="HDU 入门最合适哒（三周）"></a>HDU 入门最合适哒（三周）</h2><h3 id="1062-Text-Reverse"><a href="#1062-Text-Reverse" class="headerlink" title="1062 Text Reverse"></a>1062 Text Reverse</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">using namespace std;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">	int i;</div><div class="line">	while(cin&gt;&gt;i)</div><div class="line">	&#123;</div><div class="line">		getchar();</div><div class="line">		while(i--)</div><div class="line">		&#123;</div><div class="line">			int b;</div><div class="line">			char s[1000];</div><div class="line">			gets(s);</div><div class="line">			int a=0;</div><div class="line">			for(;s[a]!=&apos;\0&apos;;a++)</div><div class="line">			&#123;</div><div class="line">				if(s[a]==&apos; &apos;)</div><div class="line">				&#123;</div><div class="line">					b=a-1;</div><div class="line">					for(;s[b]!=&apos; &apos;&amp;&amp;b&gt;=0;b--)</div><div class="line">					&#123;</div><div class="line">						cout&lt;&lt;s[b];</div><div class="line">						if(b==0)</div><div class="line">							break;</div><div class="line">					&#125;</div><div class="line">					cout&lt;&lt;&apos; &apos;;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			if(s[a]==&apos;\0&apos;)</div><div class="line">				&#123;</div><div class="line">					b=a-1;</div><div class="line">					for(;s[b]!=&apos; &apos;&amp;&amp;b&gt;=0;b--)</div><div class="line">					&#123;</div><div class="line">						cout&lt;&lt;s[b];</div><div class="line">						if(b==0)</div><div class="line">							break;</div><div class="line">		&#125;</div><div class="line">			&#125;</div><div class="line">			cout&lt;&lt;endl;</div><div class="line">	&#125;</div><div class="line">	&#125;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -719,7 +732,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">4</span></a>
             </ul>
         </li>
         
