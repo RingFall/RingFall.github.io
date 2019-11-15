@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Deja Wu | 
+        
+        RingFa1l
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/ling.png">
+    <link rel="icon" href="/img/ling.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="null">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="RingFa1l">
+    <meta name="msapplication-starturl" content="http://ringfall.top/2019/07/15/sr/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="RingFa1l">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/ling.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://ringfall.top/2019/07/15/sr/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Deja Wu | RingFa1l">
+    <meta property="og:image" content="/img/ling.png">
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="Mon Jul 15 2019 10:16:11 GMT+0800">
+        <meta property="article:modified_time" content="Fri Sep 06 2019 14:56:24 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://ringfall.top/2019/07/15/sr/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://ringfall.top/2019/07/15/sr/index.html",
+    "headline": "Deja Wu",
+    "datePublished": "Mon Jul 15 2019 10:16:11 GMT+0800",
+    "dateModified": "Fri Sep 06 2019 14:56:24 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "铃落",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/2.jpg"
+        },
+        "description": "铃音不才，纷落为歌。"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "RingFa1l",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/ling.png"
+        }
+    },
+    "keywords": "null",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-2-zoom0-1"><span class="post-toc-number">1.</span> <span class="post-toc-text">6.2 - zoom0.1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-12-zoom0-2"><span class="post-toc-number">2.</span> <span class="post-toc-text">7.12 - zoom0.2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-15-zoom0-3"><span class="post-toc-number">3.</span> <span class="post-toc-text">7.15 - zoom0.3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-16-0-未参加"><span class="post-toc-number">4.</span> <span class="post-toc-text">7.16 - 0.未参加</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-17-1-0"><span class="post-toc-number">5.</span> <span class="post-toc-text">7.17 - 1.0</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-18-1-1-zoom1-1"><span class="post-toc-number">6.</span> <span class="post-toc-text">7.18 - 1.1+zoom1.1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-19-1-2"><span class="post-toc-number">7.</span> <span class="post-toc-text">7.19 - 1.2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-20-1-3"><span class="post-toc-number">8.</span> <span class="post-toc-text">7.20 - 1.3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-21-1-4"><span class="post-toc-number">9.</span> <span class="post-toc-text">7.21 - 1.4</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-22-1-5"><span class="post-toc-number">10.</span> <span class="post-toc-text">7.22 - 1.5</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-23-1-6-zoom2-1"><span class="post-toc-number">11.</span> <span class="post-toc-text">7.23 - 1.6+zoom2.1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-24-2-1"><span class="post-toc-number">12.</span> <span class="post-toc-text">7.24 - 2.1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-26-2-3"><span class="post-toc-number">13.</span> <span class="post-toc-text">7.26 - 2.3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-26-2-3-1"><span class="post-toc-number">14.</span> <span class="post-toc-text">7.26 - 2.3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-25-2-2"><span class="post-toc-number">15.</span> <span class="post-toc-text">7.25 - 2.2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-26-2-3-2"><span class="post-toc-number">16.</span> <span class="post-toc-text">7.26 - 2.3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-27-2-4"><span class="post-toc-number">17.</span> <span class="post-toc-text">7.27 - 2.4</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-28-2-5"><span class="post-toc-number">18.</span> <span class="post-toc-text">7.28 - 2.5</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-29-2-6"><span class="post-toc-number">19.</span> <span class="post-toc-text">7.29 - 2.6</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-30-2-7"><span class="post-toc-number">20.</span> <span class="post-toc-text">7.30 - 2.7</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-31-3-1"><span class="post-toc-number">21.</span> <span class="post-toc-text">7.31 - 3.1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-1-3-休息"><span class="post-toc-number">22.</span> <span class="post-toc-text">8.1 - 3.休息</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-2-3-2"><span class="post-toc-number">23.</span> <span class="post-toc-text">8.2 - 3.2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-3-4-1"><span class="post-toc-number">24.</span> <span class="post-toc-text">8.3 - 4.1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-4-4-2"><span class="post-toc-number">25.</span> <span class="post-toc-text">8.4 - 4.2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-5-4-3"><span class="post-toc-number">26.</span> <span class="post-toc-text">8.5 - 4.3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-6-4-4"><span class="post-toc-number">27.</span> <span class="post-toc-text">8.6 - 4.4</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-7-4-5"><span class="post-toc-number">28.</span> <span class="post-toc-text">8.7 - 4.5</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-8-4-6"><span class="post-toc-number">29.</span> <span class="post-toc-text">8.8 - 4.6</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-9-4-7"><span class="post-toc-number">30.</span> <span class="post-toc-text">8.9 - 4.7</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-10-4-8"><span class="post-toc-number">31.</span> <span class="post-toc-text">8.10 - 4.8</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-11-4-9"><span class="post-toc-number">32.</span> <span class="post-toc-text">8.11 - 4.9</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-12-5-1"><span class="post-toc-number">33.</span> <span class="post-toc-text">8.12 - 5.1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-13-5-2"><span class="post-toc-number">34.</span> <span class="post-toc-text">8.13 - 5.2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-14-5-3"><span class="post-toc-number">35.</span> <span class="post-toc-text">8.14  - 5.3</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-15-5-4"><span class="post-toc-number">36.</span> <span class="post-toc-text">8.15 - 5.4</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-16-5-5"><span class="post-toc-number">37.</span> <span class="post-toc-text">8.16 - 5.5</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-17-5-6"><span class="post-toc-number">38.</span> <span class="post-toc-text">8.17 - 5.6</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-18-5-7"><span class="post-toc-number">39.</span> <span class="post-toc-text">8.18 - 5.7</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-19-5-8"><span class="post-toc-number">40.</span> <span class="post-toc-text">8.19 - 5.8</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-20-5-9"><span class="post-toc-number">41.</span> <span class="post-toc-text">8.20 - 5.9</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-21-6-0"><span class="post-toc-number">42.</span> <span class="post-toc-text">8.21 - 6.0</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-22-6-1"><span class="post-toc-number">43.</span> <span class="post-toc-text">8.22 - 6.1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-24"><span class="post-toc-number">44.</span> <span class="post-toc-text">8.24</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-25"><span class="post-toc-number">45.</span> <span class="post-toc-text">8.25</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-26"><span class="post-toc-number">46.</span> <span class="post-toc-text">8.26</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-27"><span class="post-toc-number">47.</span> <span class="post-toc-text">8.27</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-28"><span class="post-toc-number">48.</span> <span class="post-toc-text">8.28</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-29"><span class="post-toc-number">49.</span> <span class="post-toc-text">8.29</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-30"><span class="post-toc-number">50.</span> <span class="post-toc-text">8.30</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-31"><span class="post-toc-number">51.</span> <span class="post-toc-text">8.31</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-1"><span class="post-toc-number">52.</span> <span class="post-toc-text">9.1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-2"><span class="post-toc-number">53.</span> <span class="post-toc-text">9.2</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-6"><span class="post-toc-number">54.</span> <span class="post-toc-text">9.6</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Deja Wu
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/2.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>铃落</strong>
+        <span>7月 15, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Deja Wu&url=http://ringfall.top/2019/07/15/sr/index.html&pic=http://ringfall.top/img/ling.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Deja Wu&url=http://ringfall.top/2019/07/15/sr/index.html&via=铃落" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ringfall.top/2019/07/15/sr/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ringfall.top/2019/07/15/sr/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="6-2-zoom0-1"><a href="#6-2-zoom0-1" class="headerlink" title="6.2 - zoom0.1"></a>6.2 - zoom0.1</h2><p>使用 <a href="https://www.figma.com/file/IGO7vwtu1rdsEbuZAmXlVbAa/Deja-Wu?node-id=0%3A1" target="_blank" rel="external">Figma</a> 介绍了情景：</p>
+<ul>
+<li>video等 - 用直觉keyword搜到</li>
+<li>email/文件</li>
+<li>搜索后对应的最终复制的text/截图</li>
+<li>社交网络  <del>（需要登录访问？还是直接快照？）</del> </li>
+<li>弱数据类型（如邮件里有xxx加冒号）</li>
+</ul>
+<p>重现搜索/浏览历史keyword和行为</p>
+<p>目标：usefulness、usability、通用化（理解+规则）、直接给出用户想要的信息</p>
+<p>学习 Fauxbar 的框架做 search bar -&gt; 封装模块 -&gt; 数据交互</p>
+<h2 id="7-12-zoom0-2"><a href="#7-12-zoom0-2" class="headerlink" title="7.12 - zoom0.2"></a>7.12 - zoom0.2</h2><p>最终实现形式为打开新tab时出现search bar</p>
+<p><a href="https://docs.google.com/document/d/11t0Rk0vp-PCFaAntSToLkglzHWr-TaHtaVcaVAxzx-E/edit" target="_blank" rel="external">formative study: summary</a> / <a href="https://docs.google.com/spreadsheets/d/1gWbMYzXUkuTQTIo_kGxOHRz7OAZ5yb5HYk7bXZl1-Gs/edit#gid=0" target="_blank" rel="external">Study Synthesis</a> </p>
+<p>整体如何以用户需求为导向实现，在用户浏览时捕获用户注意力点和行为来确定（email栗子：只会想搜看过的），安装时仅通过history搜集，安装后可在浏览时搜集</p>
+<p>如何普适性地分析网页：（research哒意义：结构化认识用户浏览记录，抽象出真正感兴趣的）</p>
+<ul>
+<li>用户想要网址还是数据 -&gt; 对数据类型不需要有强的认识</li>
+<li>网页和描述信息的共性</li>
+</ul>
+<p>切入点：重复访问，简单逻辑</p>
+<p>分析时可能会用到nlp、分词之类的，具体在开发时会涉及</p>
+<p>不要局限于细节，要对用户motivation有宏观认识</p>
+<p>之前repo的后台可以迁移，再进行拓展</p>
+<p>每天记录吖（工作都是小模块），重点：描述好进度、沟通好问题</p>
+<p>（可以学学react）</p>
+<p>截图时可以直接给出dom tree中text</p>
+<h2 id="7-15-zoom0-3"><a href="#7-15-zoom0-3" class="headerlink" title="7.15 - zoom0.3"></a>7.15 - zoom0.3</h2><p>介绍根据用户调查确定的重新搜索难度分类</p>
+<p>栗子（嵌入的video，keyword和标题不对应，可从最初query入手；共享文件和已删除post：几乎不可能重新搜到）</p>
+<p><del>ps. 听说了一个好东西：<a href="https://trello.com/" target="_blank" rel="external">trello</a> 这不就是窝一直想找的防拖延防懒癌ddl管理嘛哭</del> </p>
+<h2 id="7-16-0-未参加"><a href="#7-16-0-未参加" class="headerlink" title="7.16 - 0.未参加"></a>7.16 - 0.未参加</h2><p>不叽到嗦了啥qvq，在群里发了个图，<del>待更新</del> </p>
+<p><img src="https://s2.ax1x.com/2019/07/22/eCYv0U.jpg" alt="eCYv0U.jpg"></p>
+<h2 id="7-17-1-0"><a href="#7-17-1-0" class="headerlink" title="7.17 - 1.0"></a>7.17 - 1.0</h2><p>delta体验满分，还在灰机上拍到了和月亮肩并肩的皂片！开心x 转机拿行李也不是很麻烦，除了过海关真的排了好久的队，然后国内飞机的登机口最后变了之外，其他都很顺利鸭~</p>
+<p>然后就遇见啦Patricia，真的好热情qvq，看了一眼匹茨堡downtown，然后就进入了山区x</p>
+<p>买了超大一片的pizza肥去加热味道真的还不错，然后见到啦Sally~一个晚上拉了四坨x</p>
+<h2 id="7-18-1-1-zoom1-1"><a href="#7-18-1-1-zoom1-1" class="headerlink" title="7.18 - 1.1+zoom1.1"></a>7.18 - 1.1+zoom1.1</h2><p>根据不同需求实现形式的三种分类</p>
+<p>完善了table和流程图</p>
+<p>讨论了下周二前任务具体实现目标</p>
+<p>然后前端就给那个js哒expert惹？那窝干嘛鸭</p>
+<p>总之就是看看怎么用api tracking，然后怎么个算法和怎么存储，然后返回显示啦~ <del>（说起来真的好简单qvq，结果API都看不懂</del> </p>
+<hr>
+<p>和Patricia逛超市！买了一整箱blueberry！还有好多次的！QAQ！太爽了叭</p>
+<p>早饭系柜子里原来哒麦片，中饭系昨天剩下哒pizza和刚买哒cherry和椰子水！比自来水不叽到好喝到哪里去惹嘤嘤嘤！晚饭系squash和牛肉，为了把握熟的程度寄几煎哒！</p>
+<p>下午Patricia开车送我去tepper quad见面后就尝试惹第一次坐车肥去QAQ。Patricia安利的APP时间一丢丢也不准，然后不报站？喵喵喵？？枯了，只能看定位预判寄几到哪了</p>
+<p>晚上坐在床上一边zoom一边次一盘蓝莓真的是美滋滋x然后就碎着了！碎到九十点叭，起来洗了个澡就十二点了？然后明明是下楼准备嗦goodnight的结果先是逗Sally玩然后变成了装Patricia新买的汪窝~虽然很简单蛋窝力气小啊x，不过还是完成啦！毕竟窝系engineer鸭~然后就被夸xN~</p>
+<h2 id="7-19-1-2"><a href="#7-19-1-2" class="headerlink" title="7.19 - 1.2"></a>7.19 - 1.2</h2><p>Patricia因为惊叹于窝的聪明才智(?)给了一个Nick name: fighter pilot，简称fp，为啥窝总觉得是flappy pig啊233333333333</p>
+<p>早上次了昨天买的嘎嘣脆的麦片！好次嘤嘤嘤，中午带了水果去（虽然中午才去x），晚饭那个菜炒的焦焦的吼吼次鸭！但是那个鸡翅窝喵喵喵？画的那么好看结果又酸又辣？？？而且根本不是烤翅嘛QAQ</p>
+<hr>
+<p>因为没了前端的活所以突然的迷茫？就看了下另一个小伙伴画的流程图？感觉和窝想的不太一样啊qvq，然后就各种问题和mentor嗦了一哈，正好嗦到NER，就让窝搞语言处理这一块，窝一看这不就是分词嘛<del>，大创凉凉预警</del> 用ml在用户端建模型肯定不现实啊，要是还要server也好麻烦鸭，所以就踏上了直接找API的道路，然后窝给他看窝找的NER，他看了一哈嗦用google cloud的nlp API，因为它功能全。</p>
+<p><del>然后窝看了一眼不就是加了ner之外的什么词性标注之类的吗？？你枣嗦窝直接找个不仅仅是ner的啊？不是你嗦要ner嘛。。。咱也不敢反驳qvq</del> 就丢了两个链接嘤嘤嘤</p>
+<p>于是又得去注册google cloud，神它喵找中国找了半天最后确定没有？？？随缘吧。。。有信用卡就行</p>
+<p>然后发现只用这个做nlp的API也太可惜惹！这个看起来好像灰常全能啊！还有云端函数和存储，明天去给他们安利一波~</p>
+<p>然后因为在那没信用卡，所以就枣枣的肥来惹，在门口遇见了来自越南的nlp大佬？在Patricia的督促x下和窝愉快地聊天？给了我一些申请的建议然后窝发现窝好像都已经无能为力了吖QAQ，然后发现窝比Patricia更能get他的笑点？23333</p>
+<p>哦对，忙完记得加linkin</p>
+<p>肥来之后就发现mentor发了微信让窝赶紧调qvq</p>
+<p>google cloud还是友好顺利地调出来了，然鹅尝试那个fetch的函数就一直米有返回哭。哦对，然后终于搞明白deja wu他们原来已经有的代码是啥了，就是把webpack用在chrome extension开发上，可以hot reload，搞明白了就苏糊了（瘫</p>
+<h2 id="7-20-1-3"><a href="#7-20-1-3" class="headerlink" title="7.20 - 1.3"></a>7.20 - 1.3</h2><p>早上四点醒来调环境你能信x</p>
+<p>而且居然一整天下来还是和平常一样的困度x</p>
+<hr>
+<p>第一下又是开始整理进度？总之分了一下各个方向？</p>
+<p><a href="https://imgchr.com/i/eCttAg" target="_blank" rel="external"><img src="https://s2.ax1x.com/2019/07/22/eCttAg.jpg" alt="eCttAg.jpg"></a></p>
+<ul>
+<li>region of interest<ul>
+<li>spatial</li>
+<li>cursor</li>
+</ul>
+</li>
+<li>tracker<ul>
+<li>click</li>
+<li>highlight/copy</li>
+<li>screenshot</li>
+</ul>
+</li>
+<li>query</li>
+<li>navigation graph</li>
+<li>NLP</li>
+<li>storage<ul>
+<li>key - url?</li>
+<li>visit: time/number</li>
+</ul>
+</li>
+<li>ranking</li>
+</ul>
+<p>然后就整nlp API返回后的处理呗，本来想研究研究高大上的句法依存树？然后嗦不用qvq，于是就简单地把形容词加名词xN的这种短语找粗来就没惹x</p>
+<p>还有就是有冒号那种，为了generalize窝就写一起了。最后返回的是一个数组，如果有冒号，值就放在数组最后，前面描述如果简短就直接进数组，如果长正好是按之前分析句子的流程抓出来放进数组。</p>
+<p>然后发现在xhr函数外是无法获取xhr的改变的，因为是异步吖！外面执行完了函数还在请求吖！所以应该在函数里面返回哒~</p>
+<p>另外：求求你憋再忘记写var了嘤嘤嘤</p>
+<hr>
+<p>肥家做公交的时候终于！终于有一次在正确的车站下车惹！！然后就鸡冻地在三岔路口走错了路？qvq</p>
+<p>晚上又装了个汪汪的小栅栏，每次次饭Patricia都会一直和窝聊天qvq，然后窝就次的更更更慢了x，吐槽川普啊，介绍她的girlfriends啊，blabla~</p>
+<p>晚上本来想直接继续工作的，结果一碰到床就碎了嘤嘤嘤x</p>
+<h2 id="7-21-1-4"><a href="#7-21-1-4" class="headerlink" title="7.21 - 1.4"></a>7.21 - 1.4</h2><p>等了一个小时公交车！要不是那有个粗粗的电线杆窝就能在pitt热烈的阳光下成为喵喵干了QAQ（总之每天等车都会有种今天不运营的错觉x</p>
+<p>喵生好艰难嘤嘤嘤</p>
+<p>枣饭次完后Patricia居然也这么早起了？2333然后让我看newspaper上关于China的新闻？？惊了，还真都是狗屁x明明是China帮助别的国家建设一定要嗦有所企图？还控制世界？？还不如担心一下哪天本喵毁灭世界呢！还red scare，应该系喵喵scare！嗷~</p>
+<p>愚昧。没话嗦x。不过报纸大概都这样叭，哪哪都一样x</p>
+<p>幸好Patricia有一颗求知的心吖，还天天夸窝，窝可能这一个月后就上天了，walk into sky鸭23333333</p>
+<hr>
+<p>开了一个新repo，然后窝在里面测试了一下发现返回时好像只有已知数组个数时能赋值emmmm</p>
+<p>先commit叭x拿出多年没用的sourceTree~</p>
+<p>下午摸了个session存储结构的伪代码，不用测试不用debug就是爽QAQ</p>
+<p>然后在板子上画吖画，因为窝想的是直接索引前一个网页，结果Micheal嗦还是得有session的概念？因为最后的搜索是reverse的，行8</p>
+<hr>
+<p>今天晚上去成都gourmet次饭饭！嘻嘻</p>
+<p>然后就storm+flood？？？原来中文名叫老四川？？？枯了，这个暴雨真的是和那次被困徐州有的一拼</p>
+<h2 id="7-22-1-5"><a href="#7-22-1-5" class="headerlink" title="7.22 - 1.5"></a>7.22 - 1.5</h2><p>另一个小伙伴去downtown爽了？</p>
+<p>于是窝一只喵在wean hall受冻QAQ</p>
+<p>因为周二的目标的问题就先不写session了，然后是剩reverse和roi在content和background间传递和nlp处理再存储这两块，所以就写后面这个呗，前面那个又要看库x头大QAQ</p>
+<p>第一下又有bug，天天de也太惨了叭，他还怀疑窝会不会de，窝。。。嘤</p>
+<p>最后直接title还是tab数组改了</p>
+<p>后面这个也要看函数，不过还行就直接可以work，然后本来想的在content里直接nlp结果因为content是直接在当前页面执行的所以会有corb跨域拒绝可还行，然后发送到background就可以啦~然后就是调调调</p>
+<p>晚上等整合一下listener的handler</p>
+<hr>
+<p>Patricia严肃地讨论了教授的问题，QAQ窝也想问啊，但是咱又不敢x，怂洗窝算了</p>
+<h2 id="7-23-1-6-zoom2-1"><a href="#7-23-1-6-zoom2-1" class="headerlink" title="7.23 - 1.6+zoom2.1"></a>7.23 - 1.6+zoom2.1</h2><p>周二！第一个<a href="https://docs.google.com/document/d/1eyhijccVxJxD-lPIsRnP6KRDWdxyvDHw-DZBEdOGBAc/edit" target="_blank" rel="external">Deja Wu Milestones</a>！</p>
+<p>早上Patricia计划了她的invitation。okokok</p>
+<p>中午第一次吃外面的东西，7%tax+15%tip怕不是要吃穷我，再次感到选择homestay是一个多么明智的决定qaq</p>
+<hr>
+<p>早上先是把长句和短语分开，加上标点，调updata存储时发现会overwrite，于是college就来调吖调，</p>
+<p>最后整合好了两个listener刚好他也调好了</p>
+<p>晚上zoom了第二周目标~</p>
+<ul>
+<li>storage转到firebase</li>
+<li>roi修改</li>
+<li>gmail</li>
+<li>key_value模糊搜索</li>
+<li>Associative memory</li>
+<li>fetch all associate memory</li>
+<li>Frecency + JS-search </li>
+<li>UI</li>
+<li>error</li>
+</ul>
+<hr>
+<p>commit前要先pull一下master！</p>
+<h2 id="7-24-2-1"><a href="#7-24-2-1" class="headerlink" title="7.24 - 2.1"></a>7.24 - 2.1</h2><p>TODO：</p>
+<ul>
+<li>接收LinkedIn √</li>
+<li>加stopwords，两个存储前 √</li>
+<li>整理昨天记录 √</li>
+<li>roi找办法 √<ul>
+<li>viewport 部分包含修正</li>
+<li>contain_English_letter 前端空格修正</li>
+</ul>
+</li>
+<li>把impliData放进index测试 √</li>
+</ul>
+<h2 id="7-26-2-3"><a href="#7-26-2-3" class="headerlink" title="7.26 - 2.3"></a>7.26 - 2.3</h2><h2 id="7-26-2-3-1"><a href="#7-26-2-3-1" class="headerlink" title="7.26 - 2.3"></a>7.26 - 2.3</h2><h2 id="7-25-2-2"><a href="#7-25-2-2" class="headerlink" title="7.25 - 2.2"></a>7.25 - 2.2</h2><ul>
+<li>fix roi 重复 problems √</li>
+<li>gmail api<ul>
+<li>integrate 一定需要inject到dom里，无法作为content script执行 （Micheal√）</li>
+<li>content</li>
+<li>attachment</li>
+<li>from</li>
+</ul>
+</li>
+<li>处理冒号key_phrase（等storage出来，目前firebase凉了23333333）</li>
+</ul>
+<h2 id="7-26-2-3-2"><a href="#7-26-2-3-2" class="headerlink" title="7.26 - 2.3"></a>7.26 - 2.3</h2><ul>
+<li><p>capture roi without scrolling √</p>
+<p>窝惊了，这个<a href="http://www.runoob.com/try/try.php?filename=tryjsref_onscroll" target="_blank" rel="external">滚动</a>事件居然是按滚动幅度算次数的吗？？窝嗦怎么滚动一次执行好几次scroll，枯了x</p>
+</li>
+<li><p>gmail （email address, email text, subject, attachment url）</p>
+<p>DOMEmail还是没法传，等fix再看qvq</p>
+</li>
+</ul>
+<hr>
+<p>去fallingwater！开心！</p>
+<p>然后又是下雨，真的是falling water嘤嘤嘤</p>
+<p>太豪华惹，总是会幻想要是当初真的学了建筑，会不会比现在搬砖的样叽有哪样哪样的区别呢x</p>
+<p>好想住在深山里吖qvq</p>
+<h2 id="7-27-2-4"><a href="#7-27-2-4" class="headerlink" title="7.27 - 2.4"></a>7.27 - 2.4</h2><ul>
+<li>YouTube 不一次性加载 √</li>
+<li>gmail text √</li>
+<li>时间里也有冒号咋办鸭 用正则先取出来 √</li>
+<li>entity：时间，地点</li>
+<li>怎么提取key_value鸭（冒号；nlp）</li>
+<li>还要区分roi大小吗</li>
+<li>感觉重头开始惹QVQ</li>
+</ul>
+<hr>
+<p>中午的鱼好好次鸭嘤</p>
+<p>上次觉得超好次的花菜末没那么好次了QAQ，一定是炒的不够焦x</p>
+<h2 id="7-28-2-5"><a href="#7-28-2-5" class="headerlink" title="7.28 - 2.5"></a>7.28 - 2.5</h2><p>枣上走过来的时候一个骑车哒和一个跑步哒和窝打招呼惹！嘻嘻</p>
+<p>真是神奇吖，明明微笑只要微微牵动一下嘴角的神经，蛋却可以给寄几和他人带来那么大哒喜悦~</p>
+<p>中午的印度菜好可怕啊QAQ晚上的红扁豆也有点鬼畜x</p>
+<hr>
+<p>最终获取：</p>
+<ul>
+<li>句子/段落内key_value（需要node确定看没看 -&gt; 需要innertext中换行确定段落 -&gt; entity找出value，key为整个段落）</li>
+<li>url的描述（所有innertext？如何删去导航栏之类的：innertext中短语占一行，innertext中本来就只有body里的，米有导航栏好像；email结构不同，email能用node吗）</li>
+</ul>
+<p>新问题：</p>
+<p>为了YouTube那种慢慢加载的改了extraction getAllNode之后node的seen flag就没用了QAQ</p>
+<p>解决：</p>
+<p>把nodes全局，只做更新</p>
+<p>loaded突然粗线不了了QAQ竟然是网页加载太快惹？</p>
+<p>如果用innertext那在innertext里也加flag？</p>
+<p>还是区分出初始化的函数叭，页面加载时初始化（YouTube可以是在extraction里另加个判断），初始化为innertext分段</p>
+<p>extraction逻辑：获取textnode -》 更新textnode（不在innertext里的不要，小于20字符不要） -》循环textnode按顺序匹配paragraph -》将匹配好的paragraphs传给bg</p>
+<h2 id="7-29-2-6"><a href="#7-29-2-6" class="headerlink" title="7.29 - 2.6"></a>7.29 - 2.6</h2><p>中介居然嗦窝的总结很详细23333，应该像Patricia嗦的那样写today is a good day. The END.</p>
+<p>选座位必备：靠背，温暖，旋转，软垫，插座x</p>
+<hr>
+<ul>
+<li>filterImportantNodes 第一下想的是sidebar不在body的innertext里，结果发现都在 -》 然后发现都在innertext的最后，就想通过前后node的index间隔差大小来取舍，但是想到要是他已经划到最后了那sidebar content的index就直接在正文文本的后面了依旧无法去除 -》<del>所以最后还是要看长度？</del> 或者设个判断的flag和已经发送过的flag合并起来叭 √</li>
+</ul>
+<p>todo：</p>
+<ul>
+<li>optimize init √</li>
+<li>important √</li>
+<li>nlp提取entity key_value</li>
+<li>roiHandler还要留吗QAQ，都系爱写粗来的怎么舍得删嘤嘤嘤</li>
+<li>存</li>
+</ul>
+<hr>
+<p>TODO更新：</p>
+<ul>
+<li>paragraphs直接存textinterest √</li>
+<li>修改不要的代码和命名规范 √</li>
+<li>key_value: 词_entity描述+textinterest中index √</li>
+<li>gmail区分获取所有innertext</li>
+<li>看YouTube情况</li>
+</ul>
+<h2 id="7-30-2-7"><a href="#7-30-2-7" class="headerlink" title="7.30 - 2.7"></a>7.30 - 2.7</h2><p>早上安慰了一波Patricia搞得她热泪盈眶然后想叫hai天天接送窝肥家了尴尬x</p>
+<hr>
+<p>昨天晚上调到凌晨终于调好了gmail的get innertext（主要问题就是在index里只能抓到加载前部分，在inject里抓到的又米有分段，真的头大x喵生艰难嘤嘤嘤</p>
+<p>好的新的一天新的TODO：</p>
+<ul>
+<li>存储 √</li>
+<li>important还有问题，还是不能直接用差判断叭果然 -&gt; 判断字体大小 ：在node处getTextHeight -&gt; 打分（感觉不需要） -&gt; 怎么用呢</li>
+</ul>
+<p>找出长句（主体）的分数，高于这个为重要 √</p>
+<hr>
+<p>mentor居然想把它搞成聊天机器人的样子x窝惊了，那是不是意味着离我的大创更进一步啊23333333</p>
+<h2 id="7-31-3-1"><a href="#7-31-3-1" class="headerlink" title="7.31 - 3.1"></a>7.31 - 3.1</h2><p>虽然写3.1但好像这周二并没有milestone？</p>
+<p>但还是分隔一哈好有点时间概念，不然天天debug不知今夕何夕x</p>
+<p>Garmin！窝的Garmin到惹！调了半天表盘，都好帅啊呜呜呜x今天走去学校试一波运动功能嘻嘻</p>
+<p>那么今天干啥呢x</p>
+<p>测试各种网页调各种bug</p>
+<ul>
+<li><p>重要大字短句没存 -》更新：background收到的都会存，只在content过滤 √</p>
+</li>
+<li><p>在数组里找array的方法：</p>
+<p><code>allTextNodes.find(o =&gt; o[0] === newNode.nodeValue)</code> </p>
+</li>
+<li><p>newNode和not include还有bug，去凉快有空调的地方调叭x窝怕电脑爆炸惹</p>
+</li>
+</ul>
+<p>墓地环境也太好了叭，完全一个超大的公园啊x最重要的是没人就很苏糊嘤嘤嘤</p>
+<p>去了target，感觉也没啥可买的唉</p>
+<hr>
+<p>又出bug了，虽说明天mentor嗦是休息，但寄几写的bug总得寄几调叭x</p>
+<ul>
+<li>find函数有问题 全等于undefined一夜之间不好用了？改成了直接非居然都有用 √</li>
+<li>打分那个数组不ok 改成只读取数组里第一个值叭 不是数组就怎么都读不到x √</li>
+</ul>
+<h2 id="8-1-3-休息"><a href="#8-1-3-休息" class="headerlink" title="8.1 - 3.休息"></a>8.1 - 3.休息</h2><p>中午和Patricia以及她的bestfriend一个中文老师一起逛了cemetery <del>好像不应该用逛2333</del> </p>
+<p>唉乐观真的是太重要了呜呜呜（没错窝嗦的就系窝x</p>
+<hr>
+<p>回来继续debug叭</p>
+<p>bug总是会调粗来的！冲鸭！</p>
+<p>前两个算是改好了8</p>
+<p>新bug：</p>
+<ul>
+<li>loaded多次时就会初始化多次？然后就会重复发？ 不会经常粗线，还行x （看了一下bg的发送逻辑因为title变了？</li>
+<li>YouTube不管打开哪个视频还是主页url都是判断的一样的x 不过存储的时候不一样就行</li>
+<li>YouTube的viewpoint又有啥问题？？？咋不太ok啊，每次都是只有第一下刷新的时候有用，滚下去鲧肥来或者换视频就都不行了x（所以为啥换视频console不刷新捏QAQ）</li>
+</ul>
+<hr>
+<p>target逛了一个小时啥都没买x</p>
+<p>可能是澳洲的教训叭x ，唯一一个有点心动的小板子一看made in China就有点丧失兴趣了，回来tb一搜虽然没有一样的但是发现了新的好东西！</p>
+<h2 id="8-2-3-2"><a href="#8-2-3-2" class="headerlink" title="8.2 - 3.2"></a>8.2 - 3.2</h2><p>要不要换老婆买小水果鸭x 这轻薄本天天装洗窝能咋办呜呜呜</p>
+<p>早上正准备粗门mentor嗦可以下午再去聊进展，幸好磨蹭着磨蹭着就没出2333</p>
+<p>去之前：</p>
+<ul>
+<li>狂测，尝试fix，总结症状</li>
+<li>这周末要开始新feature了 所以最好对现在的代码有个比较好的全局了解（主要就是存储这边的firestore + 上层对firestore存储的的load + background和content之间的通信）</li>
+</ul>
+<p>okok正好虚心求教一波，窝为什么这么菜嘤嘤嘤</p>
+<hr>
+<p>nlp - bug：</p>
+<ul>
+<li>YouTube长时间操作问题（究竟系为森莫console不刷新）</li>
+</ul>
+<p>djw - bug：</p>
+<ul>
+<li>怎么搜索出现的全是once copied?哦也有url，但窝好像没copy过啊喵喵喵？copied是哪来的？object里有吗？</li>
+<li>顺序咋排的。。</li>
+<li><del>小箭头有点丑咳咳x</del> </li>
+<li>说好的存在本地捏x，firebase又花钱又会有privacy的问题叭x，第一下为啥要换这个来着？不仅仅是用户的privacy还可能会是我们firebase的安全问题，要是有恶意用户写入啥恶意信息注入篡改别人的记录或者就是一直写入咋办x （Stack Overflow上嗦 <a href="https://stackoverflow.com/questions/48377034/sql-injection-in-firebase?rq=1" target="_blank" rel="external">因为是nosql所以不容易受SQLinjection</a> ?那MongoDB可能是个假的nosql？）看了一下还是得先 <a href="https://github.com/firebase/firebase-admin-node/issues/317" target="_blank" rel="external">过滤</a> 一波恩</li>
+</ul>
+<p>代码问题：</p>
+<ul>
+<li><a href="https://www.w3schools.com/jsref/met_win_clearinterval.asp" target="_blank" rel="external">setInterval</a> 只为了监听title加载？为啥在bg？为什么要设attempt？ √</li>
+</ul>
+<p>其他：</p>
+<ul>
+<li>important size为什么是数组才能读？为什么窝更新为空然后push就读取不到？</li>
+</ul>
+<p>总体感觉挺臃肿的。。。但还能处理的挺快也是绝了，js-search 6鸭？</p>
+<hr>
+<p>meeting的肥答：</p>
+<ul>
+<li>YouTube网站特性就是这样</li>
+<li>copied目前是第一个interest</li>
+<li>顺序还未排，未来会做title优先算法</li>
+<li>？？？他们小水果好像没有丑丑的箭头？枯了</li>
+<li>目前测试阶段不考虑安全问题x 换firebase是因为local有限制</li>
+<li>bg可以一直运行，content得加载，所以在bg发送信息直到content加载完成返回收到，但是又不能一直发所以设attempt</li>
+</ul>
+<hr>
+<p>meeting的更新：</p>
+<p>难道PhD就系天天否定自己之前的想法嘛？？让我们休息了一天嗦要下一个阶段加别的feature了结果meeting一描述——</p>
+<p>这不就是从头开始x2嘛呜呜呜</p>
+<p><a href="https://docs.google.com/document/d/1cqUDs-qgYWfci9rWkTFR32UqwCwS6Hps1eWOUFGZKa4/edit" target="_blank" rel="external">New frame: Personal Conversational Search</a></p>
+<p>总之就是要变成找过去看过的东西的语音助手了？先从YouTube。邮件。和file三个小方向上实现，每个都有特定几个模块，在用户给出描述时进行匹配并引导用户进一步提问直到找到对应信息。</p>
+<p>用mentor的话嗦，就是实现起来简单但是没人做过的东西，6鸭</p>
+<p>现在的语音助手就实现不了x撒不垃圾的QAQ</p>
+<hr>
+<p>晚上为了去concert特意四点半就肥来，结果被淋成一只全身湿哒哒的喵惹！窝枯了，为什么每次一有啥搬砖以外的活动就给窝下暴雨啊！来的时候也是粗去次饭也是fallingwater也是concert也是？？？</p>
+<p>洗完澡次晚饭已经快8点了居然还热火朝天x</p>
+<p>还有魔性蹦迪？但是小盆友萌都太可爱了叭嘤嘤嘤</p>
+<p>最后和Patricia去前面夸他们23333</p>
+<h2 id="8-3-4-1"><a href="#8-3-4-1" class="headerlink" title="8.3 - 4.1"></a>8.3 - 4.1</h2><p><img src="https://s2.ax1x.com/2019/08/03/esijbR.png" alt="esijbR.png"></p>
+<p>email：</p>
+<p>url直接获取 √</p>
+<p>title: subject / time: date √</p>
+<p>topic: innertext / length: innertext的length √</p>
+<p>visitCount: 计数（已经有visitTime，只要看visitTime个数就行，底层会写）</p>
+<p>type: (received - to 自己) / (sent: from 自己) / (forwarded: subject start with ‘Fwd:’) √</p>
+<p>*Nturns: 咋计算？RE开头？一个界面里会有所有记录</p>
+<p>link: website? clicked: 点击/存过没？url 除了点击√</p>
+<p>attachment: type / name / 点击过没？/url 除了点击√</p>
+<p>contact: from name / address / frequency咋计算 除了frequency√</p>
+<hr>
+<p>YouTube：</p>
+<p>URL √, Topic 不用, </p>
+<p>Length, WatchedLength √</p>
+<p> VisitCount, Title, Time, √</p>
+<p>WatchListAdded, Liked, √</p>
+<p>Commented, √</p>
+<p>Type (music, vlog, etc.)</p>
+<p>Uploader Name √, Subscribed √, VisitCount</p>
+<p>Character Name</p>
+<h2 id="8-4-4-2"><a href="#8-4-4-2" class="headerlink" title="8.4 - 4.2"></a>8.4 - 4.2</h2><p>YouTube：</p>
+<p>利用jQuery的点击listener √</p>
+<p>click save 都会重复n次</p>
+<p>video和email新存储 √ update函数还有问题，改了半天xikai嗦是js的问题23333明天问Micheal叭x</p>
+<h2 id="8-5-4-3"><a href="#8-5-4-3" class="headerlink" title="8.5 - 4.3"></a>8.5 - 4.3</h2><p>mentor粗去一周x窝也不叽到窝该高兴还是桑心QAQ</p>
+<p>周三之前第一个目标是把video email完成存储并且测试 </p>
+<p>第二个目标就是看一下sentby 和share to这里 具体利用页面点击行为来判断 比如sentby 这种就是先做Gmail 里面点击的link 对点击的link上面的发件人记录 shareto也先做邮件的 比如发送的邮件里面的link记录发送给了谁</p>
+<hr>
+<p>早上上了托福课然后被Patricia嫌弃了，的确一般般叭，就九个人上还想咋样</p>
+<p>下午mentor终于发信息来了x然后和他嗦循环更新出错的问题他一句把loop放promise里试试神它喵就work了？？？为啥啊！窝枯了</p>
+<p>然后叫窝看的sentby和shareto嗦要</p>
+<blockquote>
+<p>比如我想判断一个url是不是user paste in email里面的 我们需要:</p>
+<ol>
+<li>看看用户发送的email里面有没有link -&gt; 现在我们知道email里面有没有link 但是没有判断某个email是不是用户发送的</li>
+<li>用paste event listener看看这个link 有没有paste到这封邮件里面</li>
+</ol>
+</blockquote>
+<p>窝：喵喵喵？这什么逻辑这么复杂</p>
+<p>于是窝嗦直接看已发送的邮件里有没有link，然后根据emailtype update这个link的sent 或者share就行？</p>
+<p>mentor嗦：right</p>
+<p>？？？？</p>
+<p>行叭就这么做叭，然后发现link和type不在同个地方。。于是又得找load SPD的函数从最底层开始找了半天。。。最后返回的promise看都看不懂，data找都找不到。。。问另一个小伙伴又咕咕咕。窝。。卑微.jpg</p>
+<p>然后mentor又嗦要用axios简化xhr，窝看了个栗子感觉差不多啊，可是他嗦是Micheal安利的，可以用promise？那就剪呗，剪完push pull完发现天都变了？？？roi直接消失了？？？</p>
+<p>随之消失的还有各种初始化。。。</p>
+<p>问mentor嗦你加一下？？窝加了也都是undefined啊！</p>
+<p>枯了。明天看叭，窝头好冷呜呜呜呜呜呜呜呜呜呜呜呜</p>
+<h2 id="8-6-4-4"><a href="#8-6-4-4" class="headerlink" title="8.6 - 4.4"></a>8.6 - 4.4</h2><p>艹这个破电脑又自己关机。。。然后再次打开这个文件就是三天之后了？也不记得是没写还是写了没存，枯了，窝要买小水果！</p>
+<p>但是汇率蹭蹭蹭的就上了7窝能咋办嘤嘤嘤，现在买还不如中国官网便宜嘤</p>
+<p>看聊天记录才记起来这一天发生了啥。。</p>
+<p>早上和mentor聊为啥代码会变成这样，然后他火速integrate了别的把video留给了我</p>
+<p>然后午觉睡到四点半。。。头昏脑涨呜呜呜，一起来就见他问咋样，窝只能肥刚醒什么事23333，然后把video整进去之后发现arrive没法进去了？</p>
+<p>然后问Micheal他半夜发来嗦以前没用过还在研究23333</p>
+<h2 id="8-7-4-5"><a href="#8-7-4-5" class="headerlink" title="8.7 - 4.5"></a>8.7 - 4.5</h2><p>本来是继续写email的sentby和sharedto的发现content里抓url的在roiextraction里啊？已经消失了啊？然后就试试直接在gmailHandler里抓呗。</p>
+<p>于是又发现了新的问题，inject这样inject了好多次，然后在具体邮件页面刷新然后回到inbox再进邮件的时候就可以，但是在inbox刷新然后进具体邮件就不行，和Micheal嗦了之后秒速改好，tqlQAQ</p>
+<p>加了之后发现存储又出问题了23333</p>
+<p>修了这里漏了那里真的是x</p>
+<hr>
+<p>看waterfront的网站一个个店看过去，好想买lego的迈凯伦啊嘤嘤嘤，坐等升值也行啊</p>
+<p>去CWS买鞋子！shopping果然是很治愈啊qvqqqqqqqq</p>
+<p>回来买pizza的时候又突然地暴雨。。。幸好窝带了伞。。。</p>
+<h2 id="8-8-4-6"><a href="#8-8-4-6" class="headerlink" title="8.8 - 4.6"></a>8.8 - 4.6</h2><p>不知道为啥失眠。。。然后每天早上四五点准时醒一次。好难受呜呜呜</p>
+<p>然后十一点左右又睡了。。。睡到两三点起来次chili</p>
+<hr>
+<p>mentor问进度咋样，窝：arrive也没修存储也没修，卑微.jpg</p>
+<p>然后mentor突然喵修arrive，直接移到函数外就行了？？我好菜啊x</p>
+<hr>
+<p>然后又不叽到干啥了。。。emmmm</p>
+<p>哦defaultPage还没ok</p>
+<p>？？？把窝的roi删成啥样了啊呜呜呜呜呜呜呜，important size都没了？？？窝的爱啊呜呜呜</p>
+<p>然后找bookmarks的api，第一下mdn的browser居然不资词chrome？行叭你chrome你骄傲，于是用了chrome的 <a href="https://developer.chrome.com/extensions/bookmarks#method-search" target="_blank" rel="external">API</a> 为啥还是给窝报undefined？？？喵喵喵？窝加了permission了啊？佛了</p>
+<hr>
+<p>好颓废呜呜呜，又刷了知乎，这里面的人才真的是个个说话又好听啊呜呜呜</p>
+<blockquote>
+<p>借我一场秋啊，可你说这已是冬天。</p>
+</blockquote>
+<p>呜呜呜呜呜呜</p>
+<h2 id="8-9-4-7"><a href="#8-9-4-7" class="headerlink" title="8.9 - 4.7"></a>8.9 - 4.7</h2><p>把default写了。。。。bookmarks还是喵喵喵</p>
+<h2 id="8-10-4-8"><a href="#8-10-4-8" class="headerlink" title="8.10 - 4.8"></a>8.10 - 4.8</h2><p>把YouTube时间存的逻辑优化了</p>
+<p>把bookmarks solve惹</p>
+<p>叫窝看NTurns，比较了id回溯和直接看innertext分割，还是选择了后者，神它喵写正则的时候发现空格不一样？？？惊了，就这样叭x头秃</p>
+<h2 id="8-11-4-9"><a href="#8-11-4-9" class="headerlink" title="8.11 - 4.9"></a>8.11 - 4.9</h2><p>想吖想吖想scenario~</p>
+<p>update失败居然是spd还没创建？为啥不判断一哈。。。</p>
+<hr>
+<p>NLP咋处理鸭</p>
+<p>首先用户给出的句子要落到information_target上</p>
+<p>root：有动词时是动词  - 对应的obj是要找的主体 / 没动词时直接是n为主体 / 要求时root不重要但是形容时重要（怎么区分？）</p>
+<p>root - prep介词 - pobj主对象</p>
+<p>怎么找type？在不同结构里？</p>
+<p>窝的方法：所有generalize，直接dependency tree走到底x</p>
+<p>好处：关系明确，不会漏；坏：处理复杂</p>
+<h2 id="8-12-5-1"><a href="#8-12-5-1" class="headerlink" title="8.12 - 5.1"></a>8.12 - 5.1</h2><p>先抓target（循环？太不elegant惹叭？之后再看。。</p>
+<ul>
+<li>pobj: object of a preposition / dobj: direct object（多个：看除去prep能否链接回root）</li>
+<li>nsubj: nominal subject（多个：看entity/词性）（只有在what问句中）</li>
+<li>advmod WH- （只有在开头时是，为问句）</li>
+<li><del>advmod+nsubj+回溯关系 （需不需要有？不需要，nsubj应该作为限定描述）</del> </li>
+<li>root为noun</li>
+<li>优先级：开头advmod &gt; noun的root &gt; dobj/pobj （&gt; nsubj what可先判断）</li>
+</ul>
+<hr>
+<p>主要问题：</p>
+<ul>
+<li>keyword/entity/time优先级？平面化就是有这种问题。。</li>
+<li>time是用tmod加附属还是直接用识别时间那个</li>
+<li>entity之外得处理形容词</li>
+<li>type是keyword的一部分吗？给定keyword能对应固定type吗？</li>
+<li>entity和dependency咋对应</li>
+</ul>
+<hr>
+<p>description：</p>
+<p>包括：entity，形容词，时间</p>
+<p>分级：keyword &gt; entity &gt; adj. ?</p>
+<hr>
+<p>写了target的伪代码和测试代码还是很有成就感23333</p>
+<p>party也还行x虽然还是社恐，但好在自己就是个翻译，大家也还是很nice~</p>
+<p>明天把expand和description写惹！冲鸭！</p>
+<p>晚上mentor把窝的target搞进去惹x抢我commit嘤嘤嘤，还叫我第一下不要在里面加！口亨！</p>
+<p>不过如果我加的确加不了searchBar。。。哼</p>
+<p>然后又和窝争关系的问题。。。窝佛了，窝可能只是需要一个催我的，不需要管窝的。。。</p>
+<h2 id="8-13-5-2"><a href="#8-13-5-2" class="headerlink" title="8.13 - 5.2"></a>8.13 - 5.2</h2><p>ok新的一天从头开始好叭</p>
+<p>结果一开始就gg。。看昨天的undefined是因为异步请求还没请求完就返回了。然后嗦 <a href="https://javascript.info/async-await" target="_blank" rel="external">async await</a> 试一下？发现await资词是资词then的但是这写法我就不会了啊？</p>
+<p>算了肥去看description叭。。</p>
+<p>要求：不漏description、有准确关系（真的需要预设吗）、存储形式可对应match方式</p>
+<p>另外还要考虑返回时语言生成。。。好复杂啊呜呜呜呜呜呜呜呜呜呜呜呜</p>
+<p>呸。顶不住也得给窝顶。谁叫你这么懒。还这么菜！</p>
+<hr>
+<p>target √</p>
+<p>发现个bug，what开头也可能只有what为target。。。</p>
+<p>回顾了一哈mentor的聊天记录感觉用语言传达想法太难了、、、qvq</p>
+<hr>
+<p>expanded target - 应该把逻辑加在target里，优先级最高 √</p>
+<p>往前看（所有句型都得看）：</p>
+<ul>
+<li>nn noun direct修饰</li>
+<li>amod adj 普通形容词修饰 （另外处理吧？）</li>
+</ul>
+<p>往后看（所有句型）</p>
+<ul>
+<li>of指向的(pobj?) = noun direct修饰？</li>
+</ul>
+<p>问句：（再说吧。。。感觉可能得放description里判断）</p>
+<ul>
+<li>what + nusbj -&gt; dobj</li>
+<li>what -&gt; pobj (relationship)</li>
+</ul>
+<hr>
+<p>description</p>
+<p>entity</p>
+<ul>
+<li><p>单个词（无空格）</p>
+<p>已经在expanded target里：不管</p>
+<p>nn/tmod/amod：不管</p>
+</li>
+<li><p>多个词（有空格）</p>
+<p>将最后一个词按单个词过滤一遍</p>
+</li>
+</ul>
+<p>单个词过滤剩下：找direct和关系（链接前一个verb？）</p>
+<p>多个词通过过滤：直接留下（不能分，比如check-in guide），找关系</p>
+<p>amod形容词</p>
+<p>是和tmod一样扫一遍再找对应还是直接和找direct一样每次找？</p>
+<p>这个应该看会不会有不是在名词前面的形容词 / 扫一遍会扫到已经在entity里的amod</p>
+<p><del>前面情况栗子里没有但窝觉得很可能会在从句里有(find the video which is very helpful)</del> 这种情况的形容词是 acomp: adjectival complement？？？惊了</p>
+<p>后面的目前只在check-in guide这个奇葩里粗线x</p>
+<p>总结起来正好？amod和direct一样往前找，然后acomp扫一遍？爽歪歪？（待定）</p>
+<p>time：tmod还是chrono(好像一样，那就tmod叭)</p>
+<p>要加前面的限定词和形容词（吗）</p>
+<p>keyword除了type都是动词吗，如果是动词就会出现在关系里</p>
+<hr>
+<p>test：</p>
+<p>佛了就不能写在文档里吗QAQ，截的图神它喵和写的栗子不一样x面向自己想要的栗子截图：）</p>
+<p>What’s the number of the room I just reserved for tomorrow’s meeting?</p>
+<p>I’m looking for the email link Jake sent this early morning.</p>
+<p>I’m looking for the link my Airbnb host sent me this morning on the check-in guide.</p>
+<p>Play the new song from my favourite Japanese artist.</p>
+<hr>
+<p>真的是一有户外活动就暴雨。。。这个雷好鸡儿可啪啊！感觉就打在头顶！呜呜呜呜呜呜呜呜呜呜呜呜</p>
+<p>然后就被鸽了：）明明雨都停了形势一片大好QAQ</p>
+<p>然后电话和mentor争parser咋写。。。气气！气洗惹！</p>
+<p>总之是悲伤的一个晚上呜呜呜</p>
+<h2 id="8-14-5-3"><a href="#8-14-5-3" class="headerlink" title="8.14  - 5.3"></a>8.14  - 5.3</h2><p>为了蹭车6:30就来了。。。然后library没开。。。卑微</p>
+<p>说好的八点他快九点了才来，枣嗦我就直接碎了呜呜呜</p>
+<p>辞卑x</p>
+<hr>
+<p>最后还是窝给他讲窝的。。。从开始到返回都给你安排好叭</p>
+<p>还在异想天开整那些description的分类，你分了有啥子用x</p>
+<hr>
+<p>好的既然整个流程都整理好了剩下的就是马呗。。。前一天还说分类重要分类有用，窝按窝的马要大改要拖延要浪费时间！哼！好气啊！</p>
+<hr>
+<p>加找amod（advmod）的函数，poss（pron）</p>
+<hr>
+<p>记录一下上次用到的查找object方法省的又忘。。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">let obj = arr.find(o =&gt; o.name === &apos;string 1&apos;);</div></pre></td></tr></table></figure>
+<p>窝日刚刚插座插上之后瞬间黑屏而且开不了机了！窝以为窝凉了！心脏都停跳了好嘛呜呜呜呜</p>
+<hr>
+<p>逻辑清晰写的飞快。。。躺呜呜呜</p>
+<p>但总觉得接下来的match才是tricky，窝真的没力气解释，因为窝只是一只喵QAQ</p>
+<p>看看他写的窝的逻辑。哼</p>
+<p><img src="https://s2.ax1x.com/2019/08/15/mAYsnf.jpg" alt="mAYsnf.jpg"></p>
+<p>晚上waterfront肥来又zoom，然后解释窝的逻辑解释半天。哼！哼！！！</p>
+<p>最后match还是落到坠坠坠简单的js search上。。。真的太不优雅了。。。</p>
+<h2 id="8-15-5-4"><a href="#8-15-5-4" class="headerlink" title="8.15 - 5.4"></a>8.15 - 5.4</h2><p>好叭那就暴力search呗x</p>
+<p>match流程：</p>
+<p>（过滤type - ）先从得到的对象里挑出可search的词 - 把fulltext match得到的结果都加在一起 - 通过field和时间过滤出结果 - （ADJ解析过滤） - （二次full text search） - 根据结果的分配+target返回给用户目标或继续问问题 - 直到返回target</p>
+<p>需要做的：</p>
+<p>一开始的type确定的尝试函数typeDetector √ 是否可信？ </p>
+<ul>
+<li><p>不太可信，可能会有两个keyword，此时会match前面的 （如pdf in email为doc类型，但需要去email找）-&gt; 解决：type可以多个 √</p>
+</li>
+<li><p>show不能确定为video（如show me blabla） -&gt; 已注释 √</p>
+</li>
+<li><p>增加能推测出type的特定动词 √ （待补充）</p>
+</li>
+<li><p>找到一个用超长正则在字符串找数组匹配的方法。。。但是还是不优雅感觉x。但是比循环稍微好点？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>( (<span class="keyword">new</span> <span class="built_in">RegExp</span>( <span class="string">'\\b'</span> + array.join(<span class="string">'\\b|\\b'</span>) + <span class="string">'\\b'</span>) ).test(string) ) &#123;</div><div class="line">  alert(<span class="string">'match'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>如果确定了type，只在固定type内search叭？这样先type再search算优化吗。。还是反过来也一样？</p>
+<p>算了反正都是暴力憋固定type了。。</p>
+<p>什么是可search的词？</p>
+<ul>
+<li><del>不能是type类词汇（往往不会出现在plain text里）（但是搜了也无伤大雅？如果快的话？）</del> </li>
+<li>n: <code>expanded_target.split(&#39; &#39;)</code> / <code>expanded_entity.split(&#39; &#39;)</code> </li>
+<li>adj?</li>
+</ul>
+<p>search结果加在一起再构成一个SQL的结构进行下一步匹配是否可行。。</p>
+<p>field anchorKeyword 如何对应 <del>（在有无type确定的情况下）</del> 不对，现在是第一轮搜索后结果里对应匹配，所以肯定有type了，那就按照type具体field区分anchor</p>
+<p><del>写了半天还是感觉好僵硬吖，谁叽到用户会嗦啥奇怪的描述QAQ，想到那个作为测试程序猿的笑话哈哈哈哈哈嗝</del> </p>
+<p>时间过滤（应该也会需要范围类keyword，不能直接依赖库）</p>
+<p>如何根据target返回结果</p>
+<p>如何继续生成问题</p>
+<ul>
+<li>一个找到结果集中最能区分的field的算法（怎么感觉有点ML）</li>
+</ul>
+<p>用户继续说的话处理 - 将utteranceParser作为一个模块，根据每个句子不同情况进行不同process：</p>
+<ul>
+<li>同时输入除主句之外的话：有代词处理默认为target -&gt; 其他分析同主句 <del>会有新的object吗</del> </li>
+<li>窝们提供问句之后的返回：问句回答（+对问句回答主体的其他描述）-&gt; 回答匹配提问中的field（问句为询问具体field时） / 确定问句提出假设（问句为提问具体描述是否正确时） + 其他描述分析方法可同主句</li>
+</ul>
+<hr>
+<p>其实今天啥都没做QAQ。。。</p>
+<p>一直在网购。。。然后晚上又去惹Aldi shopping。。。</p>
+<p>洗完澡再肥他叭（瘫</p>
+<h2 id="8-16-5-5"><a href="#8-16-5-5" class="headerlink" title="8.16 - 5.5"></a>8.16 - 5.5</h2><p>导师又走了，，，是真的所有工作都落在窝shoulder上啊，，而且你自己马还不行，还得给他们解释。。。窝好难x</p>
+<p>今日TODO：</p>
+<p>第一步：暴力js search！</p>
+<p>searchWords提取 √</p>
+<p>第二步：field match！</p>
+<p>就这两步，看起来真它喵简单。。</p>
+<p>然后就gg了：）react class还不能读state了？这么傲娇？？？一个要异步不能普通await一个要逻辑都写在你寄几肚子里？佛了。。。</p>
+<p>把Parser移到searchBar里 √</p>
+<p>模块化移回去。。 √</p>
+<p>然后还是gg，this都undefined可还行，呜呜呜呜呜呜呜呜呜呜呜呜</p>
+<p>prep好像找来找去也就几个，还是主要是动词叭这样看的话</p>
+<p>直接用firebaseManager √</p>
+<p>第一步 √</p>
+<p>哦对时间还没解析。。QAQ</p>
+<p>search多层的还是不ok吖，明天看叭QAQ</p>
+<h2 id="8-17-5-6"><a href="#8-17-5-6" class="headerlink" title="8.17 - 5.6"></a>8.17 - 5.6</h2><p>感觉马上就要走惹呜呜呜呜呜呜呜呜呜呜呜呜，有机会再来吗</p>
+<p>cmu：有机？有机不会</p>
+<p>呜呜呜呜呜呜呜呜呜呜呜呜呜呜汇率又涨学费又涨吃不起榨菜了好吗</p>
+<hr>
+<p>改好了一层的转变函数 √</p>
+<p>结构化searchWay √（为什么明明实现都没实现就追求偷懒和好看x</p>
+<p>去重 √ （糕级啊！</p>
+<p>originalDialog需要留存以便后续匹配，只是不加index √</p>
+<p>神它喵窝之前的concat没用居然是因为它不直接改变数组而是返回新数组。。。窝好蠢x</p>
+<p>加了typeClassify √</p>
+<p>还以为forEach是什么好东西。。之前不能break，现在里面return都不能return的？</p>
+<p>为什么又冒出来一个rcmod的动词啊。。。艹</p>
+<p>感觉这个就只能是想啊想各种语言。。。</p>
+<p>时间</p>
+<p>动词anchor和field匹配</p>
+<ul>
+<li>loseMatch √</li>
+</ul>
+<p>rank？去重的地方看看能不能加，还有match的地方</p>
+<hr>
+<p>video目前资词：</p>
+<p>from/about/liked/subscribed/commented/added</p>
+<p>修改count返回</p>
+<h2 id="8-18-5-7"><a href="#8-18-5-7" class="headerlink" title="8.18 - 5.7"></a>8.18 - 5.7</h2><p>今日TODO：</p>
+<p>除video外的存储结构更改和keyword</p>
+<p>upper判断</p>
+<p>时间</p>
+<p>CONSUMER GOOD</p>
+<p>三元符ide报错</p>
+<p>default的最终匹配</p>
+<hr>
+<p>唉mentor又催着想多句的和返回的了。。不过加了语音stt是真的糕级诶嘿嘿，除了不太准。。但是中文好准啊。。。难道是英语发音太烂QAQ</p>
+<p>多句么就是上次想的搬过来：</p>
+<blockquote>
+<p>用户继续说的话处理 - 将utteranceParser作为一个模块，根据每个句子不同情况进行不同process：</p>
+<ul>
+<li>同时输入除主句之外的话：有代词处理默认为target -&gt; 其他分析同主句 <del>会有新的object吗</del> </li>
+<li>窝们提供问句之后的返回：问句回答（+对问句回答主体的其他描述）-&gt; 回答匹配提问中的field（问句为询问具体field时） / 确定问句提出假设（问句为提问具体描述是否正确时） + 其他描述分析方法可同主句</li>
+</ul>
+</blockquote>
+<p>提供返回：</p>
+<p>list中根据matchCount排序</p>
+<p>有最高：搜target（target为type：返回url及对象；target为field：返回field value；target为内容：返回包含target这句话）</p>
+<p>无最高：找到可区分field -&gt; 生成问句</p>
+<hr>
+<p>所以现在先想返回的问句和结果，这样可以和前端衔接起来嗯</p>
+<p>那就是找个鉴别的算法呗</p>
+<p>无最高：</p>
+<p>if(!type &amp;&amp; multiple types in result) What’s the type of the information resource?</p>
+<p>else if(same type in results) 还是得根据不同type看，每个type有一些可挑选为问句返回的fields</p>
+<p>通用：</p>
+<ul>
+<li>[‘visit_time’]When did you visit it?</li>
+<li>[‘VisitCount’]have you visited it more than x times?</li>
+<li>[‘Topic’,’Title’]Is it about x?</li>
+</ul>
+<p>video：</p>
+<ul>
+<li>[‘WatchListAdded’,’Liked’,’Commented’,’Subscribed’] Have you xxx the video?</li>
+<li>[‘UploaderName’]Do you remember the uploader of the video?</li>
+<li>[‘Length’]Is it longer than x minutes?</li>
+<li>[‘WatchedLength’]Have you watched (more than half) of it?</li>
+</ul>
+<p>email:</p>
+<ul>
+<li>[‘AttachmentName’]Does it have attachments?</li>
+<li>[‘Type’]Did you sent it or received it?</li>
+<li>[‘ContactName’]Who sent it to you? / Who did you send to?</li>
+<li>[‘NTurns’]Is it an email after x turns?</li>
+</ul>
+<p>doc:</p>
+<ul>
+<li>[‘Type’]What’s the type of the document?</li>
+<li>[‘TimeSpent’]Did you read it for a long time? (- product,webpage as well)</li>
+<li>[‘Website’]Does it contain any links? (- email as well)</li>
+</ul>
+<p>product:</p>
+<ul>
+<li>[‘CartAdded’]Have you added it to your cart?</li>
+<li>[‘Price’]Is it more expensive than $x?</li>
+<li>[‘ItemName’]Do you want to find x or x?</li>
+</ul>
+<p>webpage:</p>
+<ul>
+<li>[‘Bookmarked’,’Commented’]Have you x it?</li>
+<li>[‘LastVisitTime’]When did you visit it most recently?</li>
+<li>[‘SharedToChannel’,’SentByChannel’,’SharedToName’,’SharedToTime’,’SentByName’,’SentByTime’]Did you shared/received it (by x)/(to/from x)/(when)? (product,doc as well)</li>
+</ul>
+<h2 id="8-19-5-8"><a href="#8-19-5-8" class="headerlink" title="8.19 - 5.8"></a>8.19 - 5.8</h2><p>在匹村的倒数第二天qvq</p>
+<p>十二点刚上床三点就被Sally一阵持续了几个小时的狂吠吵醒：）</p>
+<p>刷了个空间发现AO3获hugo award惹！太牛逼了叭！疲惫生活的英雄梦想真的是呜呜呜啊</p>
+<p>然后早上又是住家在good girl x n神它喵人类的本质</p>
+<hr>
+<p>Micheal把前端整好了就又只剩窝马马马了。。唉振作！对自己马粗来的爱负责！</p>
+<p>highest √</p>
+<p>唉就这么点数据真的很难测试。。语音识别这准确度真的是醉了。。。</p>
+<p>target加情况：第一个词是verb的句子 下面的dobj</p>
+<p>target加情况：最后一个循环出不来到时</p>
+<p>field先diff出来后的优先顺序直接是存储结构的先后吧，不然太麻烦惹qvq</p>
+<hr>
+<p>虽然play被鸽了好歹还有个baseball game（虽然不太感冒</p>
+<p>但还是人生或许仅有一次哒经历~体育馆的垃圾食品真的好好吃qvq</p>
+<p>虽然匹村的棒球队太菜了最后0分x</p>
+<p>虽然Micheal在边上给Hai解释窝还是不懂规则</p>
+<p>但是downtown的河边还是很安详鸭~</p>
+<p>从金华的湖边到西湖到武汉江边到那个有雾的湖边，有水的地方就有柴米油盐的生活和人烟~</p>
+<p>十一点多回来知道睡不着随手把返回给写了</p>
+<p>还是觉得emmmm</p>
+<p>唉以后再优化把x</p>
+<p>明天收拾！希望Amazon能靠谱点把包送到。。简直了</p>
+<h2 id="8-20-5-9"><a href="#8-20-5-9" class="headerlink" title="8.20 - 5.9"></a>8.20 - 5.9</h2><p>现在有的问题和todo：</p>
+<p>field match方面</p>
+<ul>
+<li>加field key <code>todo: add more keys</code> fieldHandler.js</li>
+<li>（每种type的match函数里）加upper判断 <code>todo: add upper logic here in every types&#39; match function</code>  ，加default match <code>todo: add default fulltext match for other entities here</code> fieldHandler.js</li>
+<li>capital优化，现在是直接把首字母大写，但是field name是驼峰的。。 <code>todo: find another way to map words to field names</code> fieldHandler.js</li>
+<li>duplicate加count <code>todo: add count here</code> jsSearchHandler.js</li>
+<li>时间match <code>todo: add time match logic here</code> fieldHandler.js</li>
+<li>返回问句中field优先级</li>
+<li>返回结果形式，现在只有url <code>todo: optimize return results</code> <code>todo: fulltext match</code> fieldHandler.js</li>
+<li>格式化输出</li>
+<li>matchedList为空</li>
+</ul>
+<p>解析方面：</p>
+<ul>
+<li>find target循环出不来</li>
+<li>用户多句问题和答案对应和答案解析</li>
+<li>CONSUMER GOOD</li>
+<li>第一个词是verb的句子 下面的dobj</li>
+</ul>
+<p>其他：</p>
+<ul>
+<li>新代码怎么有这么多response undefined</li>
+<li>三元符ide报错（窝没有x</li>
+<li>除了video的测试</li>
+<li>email update</li>
+<li>fuzzy match</li>
+</ul>
+<p>用户回答分析：</p>
+<p>（问题id在哪记录？）</p>
+<p>无回答(don’t remember / have no idea) 问下一个field问题</p>
+<p>判断类 yes/no 直接找</p>
+<p>描述类 对应问题field匹配</p>
+<p>判断类+描述 -&gt; 代词处理加nlp加match</p>
+<h2 id="8-21-6-0"><a href="#8-21-6-0" class="headerlink" title="8.21 - 6.0"></a>8.21 - 6.0</h2><p>于是就真的在机场和飞机上写总结惹QAQ</p>
+<p>另外包果然没到，辣鸡x</p>
+<p>TODO：</p>
+<p>把TODO加到代码里 √</p>
+<p>修改代码命名 (好像目前这几个文件里大致米有不规范的了鸭QAQ)</p>
+<p>整理文档：todo+流程+问题栗子</p>
+<p>写总结~</p>
+<h2 id="8-22-6-1"><a href="#8-22-6-1" class="headerlink" title="8.22 - 6.1"></a>8.22 - 6.1</h2><p>更新TODO：</p>
+<p>field match方面</p>
+<ul>
+<li>加field key <code>todo: add more keys</code> fieldHandler.js</li>
+<li>（每种type的match函数里）加upper判断 <code>todo: add upper logic here in every types&#39; match function</code>  ，加default match <code>todo: add default fulltext match for other entities here</code> fieldHandler.js</li>
+<li>capital优化，现在是直接把首字母大写，但是field name是驼峰的。。 <code>todo: find another way to map words to field names</code> fieldHandler.js</li>
+<li>duplicate加count <code>todo: add count here</code> jsSearchHandler.js</li>
+<li>时间match <code>todo: add time match logic here</code> fieldHandler.js</li>
+<li>返回问句中field优先级 <code>todo: find priority instead of the first field</code> fieldHandler.js</li>
+<li>返回结果形式，现在只有url <code>todo: optimize return results</code> <code>todo: fulltext match</code> fieldHandler.js</li>
+<li>格式化输出 <code>todo: formatting output</code> backHandler.js</li>
+<li>matchedList为空 <code>todo: add count in loselist</code> fieldHandler.js</li>
+</ul>
+<p>解析方面：</p>
+<ul>
+<li>find target循环出不来 <code>todo: fix the problem here</code> utteranceParser.js (栗子： <code>this is a bug</code>)</li>
+<li>用户多句问题和答案对应和答案解析 backHandler.js</li>
+<li>CONSUMER GOOD <code>todo: add CONSUMER_GOOD to product type</code> utteranceParser.js</li>
+<li>第一个词是verb的句子 下面的dobj <code>todo: add circumstance that start with verb: target is first dobj</code> utteranceParser.js</li>
+</ul>
+<p>其他：</p>
+<ul>
+<li><del>新代码怎么有这么多response undefined</del> 没了</li>
+<li>三元符ide报错（窝没有x <code>todo: fix the error</code> jsSearchHandler.js</li>
+<li>除了video的测试</li>
+<li>email update</li>
+<li>fuzzy match</li>
+</ul>
+<p>用户回答分析：</p>
+<p>（问题id在哪记录？）</p>
+<p>无回答(don’t remember / have no idea) 问下一个field问题</p>
+<p>判断类 yes/no 直接找</p>
+<p>描述类 对应问题field匹配</p>
+<p>判断类+描述 -&gt; 代词处理加nlp加match</p>
+<hr>
+<p>总体流程大致：</p>
+<p><img src="https://s2.ax1x.com/2019/08/23/mr2wmF.png" alt="mr2wmF.png"></p>
+<ul>
+<li>三角1：target获取逻辑（milestone有之前纸上写哒，附上自己码的时候写的早期版本。。后面有加的改动来着</li>
+</ul>
+<p><img src="https://s2.ax1x.com/2019/08/23/mrRsHg.png" alt="mrRsHg.png"></p>
+<hr>
+<p>另外一些想到的：</p>
+<ul>
+<li>anchor动词应加入最后的fulltext匹配中，如where to pick up sb. 这种信息如果在email中，那target句子中必定需要pick来定位</li>
+<li>加时间识别的时候在poss中也得扫一遍，upper为此时entity，如tomorrow’s meeting，tomorrow为poss抓进了meeting这个description的poss数组中</li>
+</ul>
+<hr>
+<p>最后希望deja wu这个项目可以早日发布~</p>
+<p>四周的时间不长也不短，但刚刚好可以让你开始觉得你已经开始习惯这样的生活，刚刚好可以让你对这里有依恋和不舍，刚刚好是一个难忘夏日的长短吖~</p>
+<p>Déjà Wù, find what you’ve seen.</p>
+<p><img src="https://s2.ax1x.com/2019/08/23/mspEDO.png" alt="mspEDO.png"></p>
+<h2 id="8-24"><a href="#8-24" class="headerlink" title="8.24"></a>8.24</h2><p>昨天写完整理。。。今天又开始马。。。我好卑微</p>
+<p>就不能看看窝整理的吗就问问问。。。</p>
+<p>加了video的topic</p>
+<p>然后又叫我写deduplicate的count和list的回滚。。。窝真的好卑微</p>
+<p>枯了</p>
+<p>研究了半天dedup，最后发现是运算符优先级迷。。</p>
+<p>佛了</p>
+<p>todo：page topic句子里有其他type情况</p>
+<h2 id="8-25"><a href="#8-25" class="headerlink" title="8.25"></a>8.25</h2><p>神它喵他自己改了小写没改全让我fix。。。给您表演一个喵fix好叭</p>
+<p>然后神它喵发现他原来一直不知道存储应该是一层的。。。上回窝commit的居然merge没了！现在还问uploader name咋不能命中。。。再给您喵fix好叭</p>
+<p>又语音又语音 每次说的五分钟十分钟最后都是半小时一小时</p>
+<p>窝真的太卑微了</p>
+<p>然后就给他写discretize呗，还map。。。啥map啊</p>
+<h2 id="8-26"><a href="#8-26" class="headerlink" title="8.26"></a>8.26</h2><p>回校之后写了时间的匹配</p>
+<ul>
+<li>第一下tmod抓的会漏</li>
+</ul>
+<ul>
+<li>chrono解析today，last week这种会只有start没有end</li>
+</ul>
+<h2 id="8-27"><a href="#8-27" class="headerlink" title="8.27"></a>8.27</h2><p>fix 时间：把chrono放进Parser过程 √</p>
+<p>修改time match √</p>
+<p>visit_time discretize 数组处理 √</p>
+<p>title fulltext jssearch时打分权重不一样</p>
+<p><a href="https://github.com/lxieyang/dejawu-dev/issues/82" target="_blank" rel="external">utterance错误合集</a></p>
+<p>问题：</p>
+<ul>
+<li>login要点两次？</li>
+<li>Cannot read property ‘responseString’ of undefined -》 要清空</li>
+</ul>
+<h2 id="8-28"><a href="#8-28" class="headerlink" title="8.28"></a>8.28</h2><ol>
+<li>分割不出最后一个dependency -》find最后的dependency √</li>
+<li>upper仍旧在时间描述中 -》 加判断 √</li>
+<li><del>时间记录不匹配</del> 格式不一样，没问题</li>
+<li>A.M.在句中会被googlenlp分为两句话 -》 nlp前replace √</li>
+<li>today week 等无时间段 -》 增加end时间 √</li>
+<li>改了两次discrete time的数组？好像没冲突。。</li>
+</ol>
+<h2 id="8-29"><a href="#8-29" class="headerlink" title="8.29"></a>8.29</h2><p>。。命都是止痛药给的</p>
+<hr>
+<p>本来说看jssearch参数和title打分的，但是他还在改这块所以继续看nlp。。。</p>
+<p>看issue他提了个night的这种的确还得在time里加</p>
+<p>然后今天看的是解析用户回答</p>
+<p>先看看他重构的这都是些啥x</p>
+<p>嗯总的来说还是很有条理的x不像我写的QAQ</p>
+<p>嗯写facet的多句匹配呗</p>
+<p>好坑啊。。。</p>
+<p>多个key不同就不返回了？吓得窝以为窝改错了x</p>
+<p>video的length怎么都存的不对的鸭 修好了 √</p>
+<p>窝之前记的那个object的find方法居然是只能find到一个的？惊了，还是乖乖循环吧。。。</p>
+<p>（应该没了，好难受呜呜呜x</p>
+<p>想想就丢人，以后是不是得把药随身带着：）</p>
+<h2 id="8-30"><a href="#8-30" class="headerlink" title="8.30"></a>8.30</h2><p>唉又剁手。。窝为什么如此败家啊QAQ</p>
+<hr>
+<p>type clarification √</p>
+<p>response加matched形容</p>
+<ul>
+<li>jssearch每个word记录</li>
+<li>deduplicate更新</li>
+<li>每个spd加matched word</li>
+</ul>
+<p>videos输入返回多个spd</p>
+<p>神它喵。。。fuck。。。什么迷惑行为啊。。。艹,spd同个field前后脚输出的居然和spd不对上？？？</p>
+<h2 id="8-31"><a href="#8-31" class="headerlink" title="8.31"></a>8.31</h2><p>哦窝叽到了。超冷漠.jpg</p>
+<p>啥啊，为啥明明是不同word jssearch出来的结果list，在js看来依旧是同一个spd吗。。所以后来做的改变会直接影响到这个相同的spd。。。那还要什么deduplicate啊。。。枯了</p>
+<p>终于记好了fulltext matchedword。。。头秃。一测发现为什么看有没有最高matchcount的逻辑在看有没有不同type之后啊。。。问了一哈嗦好像放前面也可以？？？明明是就应该放前面好吗。。。</p>
+<hr>
+<p>然后发现多个dialog的spd这样变成旧的都还是存着了？然后第一反应是重新indexing，第二反应是每次terminal之后清空一下，最后是和导师语音描述了这个问题然后叫了Micheal外援233333，然后就一行deep copy解决原来的reference。tql</p>
+<p><code>spd = JSON.parse(JSON.stringify(spd));</code></p>
+<p>其实道理窝都懂，就是窝不会js有啥办法，毕竟窝也是刚刚语音的时候才知道for循环除了in是取key的还有of可以直接取value？？？仿佛写了一暑假假的代码呜呜呜</p>
+<hr>
+<p>于是就这样过去了一早上，还有任务有任务，窝玩新老婆都没时间呜呜呜</p>
+<p>我好难</p>
+<p>随便把calculateMatchScore给写了</p>
+<h2 id="9-1"><a href="#9-1" class="headerlink" title="9.1"></a>9.1</h2><p>唉又是新的桑桑的一天，花着本应该学TOEFL的时间调bug也不知道什么时候能有成果</p>
+<p>昨天因为网的原因commit让他看说可以了，今天窝一试明明是不行的：）</p>
+<p>而且video tracker为啥又有问题啊。。。html格式变了？</p>
+<p>改好了新的uploadername获取</p>
+<p>改了videotitle key</p>
+<p>调了半天终于发现是他改的时候matchcount和matchscore混了：）我说怎么match半天没match上</p>
+<p>返回result改成了type</p>
+<h2 id="9-2"><a href="#9-2" class="headerlink" title="9.2"></a>9.2</h2><p>.导师失联了该肿么办x</p>
+<p>我好难。。。</p>
+<p>先把response存了加上</p>
+<p>为什么。。。神它喵。。。response逻辑又改成这副鬼样子了：）</p>
+<p>阿弥陀佛。。。</p>
+<p>善哉善哉。。。</p>
+<p>find居然是用在对象数组里的。。。那对象的子对象咋找x</p>
+<p>唉办法总是有的，只是el不elegant的区别x</p>
+<p>明天如果还是失联就看email叭唉</p>
+<h2 id="9-6"><a href="#9-6" class="headerlink" title="9.6"></a>9.6</h2><p>唉鸭</p>
+<p>一不注意又好几天忘了写。。</p>
+<p>前几天大概就是又修了几个bug然后把返回句子给做了（target不是固定pagetype而是在内容中的情况）</p>
+<p>然后就是把日了喵的成绩单终于打好了</p>
+<hr>
+<p>email又粗线了bug</p>
+<p>换了个函数又得重新获取：）</p>
+<p>还有个正则匹配的问题。。。</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/06/01/duck/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/5.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/2.jpg" alt="铃落's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        ringfall3@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: ringfall3@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/11/">十一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">3</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Diary/">Diary<span class="sidebar_archives-count">11</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/timeline" title="timeline">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                timeline
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+        <li>
+            <a href="/gallery" title="miao">
+                
+                    <i class="material-icons sidebar-material-icons">palette</i>
+                
+                miao
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/cv" title="cv">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                cv
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;RingFa1l
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
