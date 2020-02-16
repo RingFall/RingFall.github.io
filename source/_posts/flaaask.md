@@ -49,9 +49,9 @@ Falsk 使用上下文让特定的变量在一个线程中全局可访问，与�
 
 ---
 
-Jinja2 支持宏和模板继承。宏类似于 Python 代码中的函数，导入宏：`\{% import 'macros.html' as macros %\}`
+Jinja2 支持宏和模板继承。宏类似于 Python 代码中的函数，导入宏：`&#123;% import 'macros.html' as macros %\&#125;`
 
-需要在多处重复使用的模板代码片段可以写入单独的文件，再包含在所有模板中，以避免 重复： `\{% include 'common.html' %\}` 
+需要在多处重复使用的模板代码片段可以写入单独的文件，再包含在所有模板中，以避免 重复： `&#123;% include 'common.html' %\&#125;` 
 
 继承就不用嗦啦，改块的时候记得加super
 
