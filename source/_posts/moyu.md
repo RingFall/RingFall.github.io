@@ -236,3 +236,29 @@ oa弱密码进去各种功能也都有waf拦着，唉
 虽然总是会有阴霾在QAQ，蛋2020能活着已经是莫大的幸运啦
 
 要继续活着鸭
+
+---
+
+学校一波操作窝惊了，被气洗。[断断续续](https://www.anquanke.com/post/id/194384)的[更新](https://www.oreilly.com/library/view/learning-java/1565927184/ch11s04.html)
+
+RMI：Remote Method Invocation，就是自面意思，可以调用远程对象方法，当C的远程调用remote procedure calls (RPC) 只传递数据结构时，java可以处理数据和方法哦 -》所以用一般会用序列化，但也有动态加载可以安全地转化？
+
+远程对象只是提供一个引用，实际的方法还是发生在远程的java虚拟机（这个类本来的地方）上滴；也有Nonremote objects，就是简单的copy传递。
+
+stubs：在这一端的代理，等于占位，向skeletons发出调用；skeletons：对象本身所在的那一端，接收stubs请求。这两个都是底层自动的。
+
+远程对象和stub都实现远程接口，继承java.rmi.Remote接口。
+
+远程对象的实际实现是继承java.rmi.server.UnicastRemoteObject，构造时监听stubs请求。
+
+RMI registry：启动rmi并且找到对应类
+
+Java默认JRMP协议，Weblogic使用T3协议。
+
+一个对象远程传输需要序列化，需要使用到这个对象就需要从序列化的数据中恢复这个对象，恢复这个对象时对应的readObject、readExternal等方法会被自动调用。
+
+[找洞](https://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/)：判断了是否存在易受攻击的库/易受攻击的特征->搜集端口信息->针对性的触发流量->在流量中寻找反序列化特征->开发利用程序
+
+JNDI (Java Naming and Directory Interface) ，包括Naming Service和Directory Service。
+
+渐渐失去理智。。。
